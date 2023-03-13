@@ -76,11 +76,11 @@ $(document).ready(function() {
 
 
 
-$(document).on('click', (e) => {
+document.onclick = (e) => {
     if(e.target.id!='navbar-btn' && $('#navbar').hasClass('sidebar-active')){
         toggleSidebar();
     }
-});
+};
 
 function toggleSidebar(){
     $('#navbar').toggleClass("sidebar-active");
