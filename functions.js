@@ -3,10 +3,11 @@ $(document).ready(function() {
     var introHeight = $(window).height() - $("#header").outerHeight();
     $('#intro').height(introHeight);
 
+
     $('#navbar-btn').on('click', toggleSidebar);
     $(window).on('scroll', () => {
         posY = $(window).scrollTop();
-        setHeader();
+        setIntroHeight();
         fnUpdateFrame();
     });
     $(window).on('resize', () => {
@@ -26,12 +27,13 @@ $(document).ready(function() {
         timelineItem = $('.timeline_item'),
         windowOuterHeight = $(window).outerHeight(),
         windowHeight = $(window).height(),
+        posY = $(window).scrollTop(),
         f = -1,
         flag = false;
-        
-
+    
     function fnUpdateFrame() {
-        flag || requestAnimationFrame(fnUpdateWindow);
+        // flag || requestAnimationFrame(fnUpdateWindow);
+        if(flag==false){ requestAnimationFrame(fnUpdateWindow); }
         flag = true;
     }
 
@@ -61,8 +63,8 @@ $(document).ready(function() {
         })
     }
 
-    
-    function setHeader(){
+
+    function setIntroHeight(){
         if (posY > introHeight) {
             $("#header").addClass("sticky");
             $('#intro').height(introHeight + $("#header").outerHeight());
@@ -71,18 +73,26 @@ $(document).ready(function() {
             $('#intro').height(introHeight);
         }
     }
+    
+    function toggleSidebar(){
+        $('#navbar').toggleClass("sidebar-active");
+        $('#navbar').toggleClass("sidebar-inactive");
+    }
+
+    $('.navbar-item').each(function (){
+        // console.log($(this));
+        $(this).on('click', (e) => {
+            var offset = $($(this).attr('href')).offset();
+            offset.top -= $("#header").outerHeight();
+            $('html, body').animate( {scrollTop: offset.top}, 1000);
+        });
+    });
+    
+    $(document).on('click', (e) => {
+        if(e.target.id!='navbar-btn' && $('#navbar').hasClass('sidebar-active')){
+            toggleSidebar();
+        }
+    });
+
 });
 
-
-
-
-document.onclick = (e) => {
-    if(e.target.id!='navbar-btn' && $('#navbar').hasClass('sidebar-active')){
-        toggleSidebar();
-    }
-};
-
-function toggleSidebar(){
-    $('#navbar').toggleClass("sidebar-active");
-    $('#navbar').toggleClass("sidebar-inactive");
-}
