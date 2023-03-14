@@ -1,8 +1,10 @@
+console.log("before document ready");
+
 $(document).ready(function() {
 
     var introHeight = $(window).height() - $("#header").outerHeight();
     $('#intro').height(introHeight);
-
+    console.log("after height fix");
 
     $('#navbar-btn').on('click', toggleSidebar);
     $(window).on('scroll', () => {
