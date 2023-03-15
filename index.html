@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <div class="bg_section">
         <div class="bg_row"></div>
     </div>
@@ -19,21 +18,17 @@
         var bgIconList = ["github_b.png", "gmail_b.png", "insta_b.png", "linkedin_b.png", "whatsapp_b.png" ];
 
         // 30 icons needed
-        var content ="<div>";
+        var icon_row ="<div>";
         for(var rep=0; rep<6; rep++){
-            for (let i = 0; i < bgIconList.length; i++) {
-                content += '<img src="dock_icons/' + bgIconList[i] + '">';
-            }
+            for (let i = 0; i < bgIconList.length; i++)
+            icon_row += '<img src="dock_icons/' + bgIconList[i] + '">';
         }
-        content += "</div>";
-        $('.bg_row').html(content + content);
+        icon_row += "</div>";
+        $('.bg_row').html(icon_row + icon_row);
 
-        var row = $('.bg_section').html();
-        content = "";
-        for(var i=0; i<24; i++){
-            content += row;
-        }
-        $('.bg_section').html(content);
+        var row = $('.bg_section').html(), bg = "";
+        for(var i=0; i<24; i++) bg += row;
+        $('.bg_section').html(bg);
     </script>
     
     <div id="intro">
@@ -64,371 +59,370 @@
         <img id="navbar-btn" src="images/menu-white.png">
     </div>
 
-    <div class="section_block" id="about">
-        <div class="section_title"><h2>About Me</h2></div>
-        
-        <div class="timeline_block">
-            <div class="timeline">
-
-                <div class="timeline_line"><div class="line_progress"></div></div>
-
-                <div class="timeline_list">
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_logo">2021</div>
-                            <div class="card_date">Season 13</div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">My test season for the title Season 13</div>
-                            <div class="card_content">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-                                eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu.
+    <div>
+        <div class="section_block" id="about">
+            <div class="section_title"><h2>About Me</h2></div>
+            
+            <div class="timeline_block">
+                <div class="timeline">
+    
+                    <div class="timeline_line"><div class="line_progress"></div></div>
+    
+                    <div class="timeline_list">
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_logo">2021</div>
+                                <div class="card_date">Season 13</div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">My test season for the title Season 13</div>
+                                <div class="card_content">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_date"><div>Season 12</div></div>
-                            <div class="card_logo"><div>2020</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 12</div>
-                            <div class="card_content">
-                                Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                                nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_date"><div>Season 12</div></div>
+                                <div class="card_logo"><div>2020</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 12</div>
+                                <div class="card_content">
+                                    Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+                                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_logo"><div>2020</div></div>
-                            <div class="card_date"><div>Season 11</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 11</div>
-                            <div class="card_content">
-                                Aenean imperdiet. Etiam ultricies
-                                nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                                Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                                adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                                eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_logo"><div>2020</div></div>
+                                <div class="card_date"><div>Season 11</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 11</div>
+                                <div class="card_content">
+                                    Aenean imperdiet. Etiam ultricies
+                                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
+                                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
+                                    sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
+                                    eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_date"><div>Season 10</div></div>
-                            <div class="card_logo"><div>2019</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 10</div>
-                            <div class="card_content">
-                                Cum sociis natoque penatibus et magnis dis parturient
-                                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_date"><div>Season 10</div></div>
+                                <div class="card_logo"><div>2019</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 10</div>
+                                <div class="card_content">
+                                    Cum sociis natoque penatibus et magnis dis parturient
+                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+                                </div>
                             </div>
                         </div>
+    
                     </div>
-
+    
                 </div>
-
             </div>
+    
         </div>
-
-    </div>
-
-    <div class="section_block" id="education">
-        <div class="section_title"><h2>My Education</h2></div>
-
-        <div class="timeline_block">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit temporibus in corporis sequi excepturi ipsam quo pariatur sed non earum tempora officia unde, fuga error sit necessitatibus repellendus asperiores vero dignissimos, dolorum hic. Illum ea officia autem sint assumenda atque, totam ex laboriosam aut error sapiente molestias deleniti soluta neque accusantium suscipit repellat commodi voluptate in cumque! Ea deleniti ipsam ducimus dolor repellat nesciunt id odit praesentium dolorem saepe assumenda veritatis consequatur doloremque laborum iste, vitae voluptate? Obcaecati nulla exercitationem delectus ducimus dolores ex accusamus minus, voluptates quae eum eaque quisquam autem inventore modi minima adipisci quas tempore corrupti unde maxime dicta. Accusamus quas vel officiis provident repudiandae explicabo? Molestias rerum nam, sed quisquam debitis repellat nesciunt voluptate aut, non itaque enim maxime illum iste dolores error assumenda eum obcaecati. Temporibus, velit quasi facere iure ea praesentium obcaecati. Quidem aperiam, repellat deleniti pariatur inventore molestiae doloremque obcaecati ex, praesentium vero esse delectus animi in, aliquam quis quod. Vel dolor, accusamus debitis corrupti temporibus exercitationem itaque ducimus doloribus reprehenderit nisi porro id quibusdam fugiat dignissimos eligendi magni totam. Repellat voluptate mollitia sed dolor excepturi voluptatem commodi omnis deserunt. Sint rerum quibusdam id aspernatur laudantium quas animi itaque totam nemo quia fuga magnam mollitia nesciunt sit, voluptatibus consequuntur debitis perferendis. Asperiores modi excepturi sequi, assumenda reprehenderit doloremque suscipit iusto placeat? Id repellat atque, quo eius nam odit ipsa incidunt. Eveniet aspernatur libero deserunt, a dolorum illo maxime veniam error quam reiciendis ad nobis nisi nihil repellat veritatis placeat eos nostrum quae exercitationem? Minima, voluptas? Deleniti dicta eaque accusantium nihil aperiam hic tempore quod, voluptatibus minima labore inventore quam sint est aliquam minus sed fuga, eum vero culpa veniam. Cumque beatae sapiente corrupti, porro rem, deserunt sed illo ut, facere natus modi a inventore nisi! Culpa autem possimus ipsa qui? Praesentium tempore sapiente sint quod maiores, voluptatibus ipsum molestias dicta. Esse inventore ullam quas harum alias molestias est sequi maxime dolorum dolorem, saepe quisquam recusandae ad minus aspernatur et eius quam. Eos corporis aut sunt at reiciendis consectetur doloremque a, in quisquam amet dolores, sequi officia error maiores repudiandae, illum nihil unde maxime dignissimos commodi laudantium repellendus quaerat iusto! Reiciendis laboriosam officiis doloribus dignissimos nobis rem hic incidunt earum pariatur iste a mollitia explicabo, quaerat odio. At sapiente voluptatibus soluta officiis. Nemo minima, itaque ratione, id exercitationem ullam porro culpa dicta voluptatum fuga sequi fugiat unde est sit adipisci distinctio magni ipsam animi! Distinctio, architecto libero sapiente eligendi culpa quidem dignissimos consequatur quisquam numquam autem veniam alias, et, soluta veritatis tempore quod ducimus illo doloribus eaque? Consequuntur neque at sint quos corporis delectus quasi numquam cupiditate minima ut? Repellat, cupiditate. Expedita sint enim labore eligendi recusandae similique eum asperiores beatae ipsa, sit dolorum porro aspernatur numquam saepe soluta et maxime excepturi quisquam distinctio corporis, nesciunt nemo libero doloribus. Ab fuga et est laudantium numquam beatae quae sed aperiam, non optio accusamus quasi quia totam, adipisci laboriosam, minus magnam dolore. Laudantium unde doloremque obcaecati praesentium illo aliquam nulla quaerat cupiditate mollitia nobis. Qui minus numquam dolore ea, quibusdam sapiente doloribus molestias reprehenderit eos, deserunt odit sequi. Expedita aliquid corporis fugit omnis sequi nesciunt a ipsam, nisi beatae facilis consequatur dicta aut animi itaque optio minima impedit recusandae fugiat libero quos. Fuga cum sequi doloremque! Assumenda voluptate maxime placeat quas dolores quae totam. Adipisci, eos unde blanditiis ea iste recusandae quis atque dolor modi similique esse, corrupti sunt voluptatem ad odio! Tempora totam vel eligendi veniam aliquid beatae nesciunt hic rerum minima error? Soluta illo architecto autem vel omnis rerum fugiat repellat exercitationem quos voluptatibus ratione accusantium nesciunt temporibus ad, voluptas illum sapiente culpa cum laudantium repudiandae sequi voluptatem impedit! Doloremque consequatur praesentium aut eos libero illo omnis perferendis necessitatibus porro hic veritatis debitis atque, cumque soluta quis fugit reprehenderit. Dolore at numquam, cumque expedita unde eius totam vero suscipit culpa, voluptate aliquam corrupti. Consectetur saepe obcaecati ratione ipsam culpa iste laboriosam veritatis doloremque quod quisquam rem, vel vero soluta illum quibusdam accusantium. Aut doloremque doloribus assumenda qui totam sed ratione. Similique deleniti cupiditate labore atque alias dolores! Voluptatibus atque cupiditate dicta assumenda eveniet quia tempora adipisci neque doloribus natus, deleniti repellendus recusandae saepe culpa nostrum. Quia tempora, recusandae ratione tenetur voluptates iste illo explicabo saepe cupiditate, consequuntur nisi magnam asperiores at rem rerum sunt suscipit quae quis ab soluta pariatur libero similique neque. Corporis unde quibusdam iste modi maiores, dicta illo inventore, eligendi incidunt accusantium tempore quasi possimus nihil officia, molestiae alias veniam! In dignissimos temporibus, vitae et aut sint labore reiciendis magni architecto repellendus praesentium blanditiis assumenda quis quae totam ratione exercitationem illum earum? Officia dolor numquam et placeat quos! Autem pariatur soluta temporibus minus quos ipsum fuga consectetur maiores incidunt molestias. Saepe earum, itaque aliquam debitis distinctio molestiae soluta numquam consectetur ab dolore quas quo veritatis eligendi sint deleniti. Ullam, deleniti incidunt!
-
-            <!-- <div class="timeline">
-
-                <div class="timeline_line"><div class="line_progress"></div></div>
-
-                <div class="timeline_list">
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_logo">2021</div>
-                            <div class="card_date">Season 13</div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">My test season for the title Season 13</div>
-                            <div class="card_content">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-                                eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu.
+    
+        <div class="section_block" id="education">
+            <div class="section_title"><h2>My Education</h2></div>
+    
+            <div class="timeline_block a">
+    
+                <div class="timeline">
+    
+                    <div class="timeline_line"><div class="line_progress"></div></div>
+    
+                    <div class="timeline_list">
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_logo">2021</div>
+                                <div class="card_date">Season 13</div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">My test season for the title Season 13</div>
+                                <div class="card_content">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_date"><div>Season 12</div></div>
-                            <div class="card_logo"><div>2020</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 12</div>
-                            <div class="card_content">
-                                Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                                nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_date"><div>Season 12</div></div>
+                                <div class="card_logo"><div>2020</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 12</div>
+                                <div class="card_content">
+                                    Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+                                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_logo"><div>2020</div></div>
-                            <div class="card_date"><div>Season 11</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 11</div>
-                            <div class="card_content">
-                                Aenean imperdiet. Etiam ultricies
-                                nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                                Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                                adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                                eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_logo"><div>2020</div></div>
+                                <div class="card_date"><div>Season 11</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 11</div>
+                                <div class="card_content">
+                                    Aenean imperdiet. Etiam ultricies
+                                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
+                                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
+                                    sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
+                                    eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_date"><div>Season 10</div></div>
-                            <div class="card_logo"><div>2019</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 10</div>
-                            <div class="card_content">
-                                Cum sociis natoque penatibus et magnis dis parturient
-                                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_date"><div>Season 10</div></div>
+                                <div class="card_logo"><div>2019</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 10</div>
+                                <div class="card_content">
+                                    Cum sociis natoque penatibus et magnis dis parturient
+                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+                                </div>
                             </div>
                         </div>
+    
                     </div>
-
+    
                 </div>
-
-            </div> -->
+            </div>
+    
         </div>
-
-    </div>
-
-    <div class="section_block" id="internships">
-        <div class="section_title"><h2>My Internships</h2></div>
-
-        <div class="timeline_block">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit temporibus in corporis sequi excepturi ipsam quo pariatur sed non earum tempora officia unde, fuga error sit necessitatibus repellendus asperiores vero dignissimos, dolorum hic. Illum ea officia autem sint assumenda atque, totam ex laboriosam aut error sapiente molestias deleniti soluta neque accusantium suscipit repellat commodi voluptate in cumque! Ea deleniti ipsam ducimus dolor repellat nesciunt id odit praesentium dolorem saepe assumenda veritatis consequatur doloremque laborum iste, vitae voluptate? Obcaecati nulla exercitationem delectus ducimus dolores ex accusamus minus, voluptates quae eum eaque quisquam autem inventore modi minima adipisci quas tempore corrupti unde maxime dicta. Accusamus quas vel officiis provident repudiandae explicabo? Molestias rerum nam, sed quisquam debitis repellat nesciunt voluptate aut, non itaque enim maxime illum iste dolores error assumenda eum obcaecati. Temporibus, velit quasi facere iure ea praesentium obcaecati. Quidem aperiam, repellat deleniti pariatur inventore molestiae doloremque obcaecati ex, praesentium vero esse delectus animi in, aliquam quis quod. Vel dolor, accusamus debitis corrupti temporibus exercitationem itaque ducimus doloribus reprehenderit nisi porro id quibusdam fugiat dignissimos eligendi magni totam. Repellat voluptate mollitia sed dolor excepturi voluptatem commodi omnis deserunt. Sint rerum quibusdam id aspernatur laudantium quas animi itaque totam nemo quia fuga magnam mollitia nesciunt sit, voluptatibus consequuntur debitis perferendis. Asperiores modi excepturi sequi, assumenda reprehenderit doloremque suscipit iusto placeat? Id repellat atque, quo eius nam odit ipsa incidunt. Eveniet aspernatur libero deserunt, a dolorum illo maxime veniam error quam reiciendis ad nobis nisi nihil repellat veritatis placeat eos nostrum quae exercitationem? Minima, voluptas? Deleniti dicta eaque accusantium nihil aperiam hic tempore quod, voluptatibus minima labore inventore quam sint est aliquam minus sed fuga, eum vero culpa veniam. Cumque beatae sapiente corrupti, porro rem, deserunt sed illo ut, facere natus modi a inventore nisi! Culpa autem possimus ipsa qui? Praesentium tempore sapiente sint quod maiores, voluptatibus ipsum molestias dicta. Esse inventore ullam quas harum alias molestias est sequi maxime dolorum dolorem, saepe quisquam recusandae ad minus aspernatur et eius quam. Eos corporis aut sunt at reiciendis consectetur doloremque a, in quisquam amet dolores, sequi officia error maiores repudiandae, illum nihil unde maxime dignissimos commodi laudantium repellendus quaerat iusto! Reiciendis laboriosam officiis doloribus dignissimos nobis rem hic incidunt earum pariatur iste a mollitia explicabo, quaerat odio. At sapiente voluptatibus soluta officiis. Nemo minima, itaque ratione, id exercitationem ullam porro culpa dicta voluptatum fuga sequi fugiat unde est sit adipisci distinctio magni ipsam animi! Distinctio, architecto libero sapiente eligendi culpa quidem dignissimos consequatur quisquam numquam autem veniam alias, et, soluta veritatis tempore quod ducimus illo doloribus eaque? Consequuntur neque at sint quos corporis delectus quasi numquam cupiditate minima ut? Repellat, cupiditate. Expedita sint enim labore eligendi recusandae similique eum asperiores beatae ipsa, sit dolorum porro aspernatur numquam saepe soluta et maxime excepturi quisquam distinctio corporis, nesciunt nemo libero doloribus. Ab fuga et est laudantium numquam beatae quae sed aperiam, non optio accusamus quasi quia totam, adipisci laboriosam, minus magnam dolore. Laudantium unde doloremque obcaecati praesentium illo aliquam nulla quaerat cupiditate mollitia nobis. Qui minus numquam dolore ea, quibusdam sapiente doloribus molestias reprehenderit eos, deserunt odit sequi. Expedita aliquid corporis fugit omnis sequi nesciunt a ipsam, nisi beatae facilis consequatur dicta aut animi itaque optio minima impedit recusandae fugiat libero quos. Fuga cum sequi doloremque! Assumenda voluptate maxime placeat quas dolores quae totam. Adipisci, eos unde blanditiis ea iste recusandae quis atque dolor modi similique esse, corrupti sunt voluptatem ad odio! Tempora totam vel eligendi veniam aliquid beatae nesciunt hic rerum minima error? Soluta illo architecto autem vel omnis rerum fugiat repellat exercitationem quos voluptatibus ratione accusantium nesciunt temporibus ad, voluptas illum sapiente culpa cum laudantium repudiandae sequi voluptatem impedit! Doloremque consequatur praesentium aut eos libero illo omnis perferendis necessitatibus porro hic veritatis debitis atque, cumque soluta quis fugit reprehenderit. Dolore at numquam, cumque expedita unde eius totam vero suscipit culpa, voluptate aliquam corrupti. Consectetur saepe obcaecati ratione ipsam culpa iste laboriosam veritatis doloremque quod quisquam rem, vel vero soluta illum quibusdam accusantium. Aut doloremque doloribus assumenda qui totam sed ratione. Similique deleniti cupiditate labore atque alias dolores! Voluptatibus atque cupiditate dicta assumenda eveniet quia tempora adipisci neque doloribus natus, deleniti repellendus recusandae saepe culpa nostrum. Quia tempora, recusandae ratione tenetur voluptates iste illo explicabo saepe cupiditate, consequuntur nisi magnam asperiores at rem rerum sunt suscipit quae quis ab soluta pariatur libero similique neque. Corporis unde quibusdam iste modi maiores, dicta illo inventore, eligendi incidunt accusantium tempore quasi possimus nihil officia, molestiae alias veniam! In dignissimos temporibus, vitae et aut sint labore reiciendis magni architecto repellendus praesentium blanditiis assumenda quis quae totam ratione exercitationem illum earum? Officia dolor numquam et placeat quos! Autem pariatur soluta temporibus minus quos ipsum fuga consectetur maiores incidunt molestias. Saepe earum, itaque aliquam debitis distinctio molestiae soluta numquam consectetur ab dolore quas quo veritatis eligendi sint deleniti. Ullam, deleniti incidunt!
-
-            <!-- <div class="timeline">
-
-                <div class="timeline_line"><div class="line_progress"></div></div>
-
-                <div class="timeline_list">
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_logo">2021</div>
-                            <div class="card_date">Season 13</div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">My test season for the title Season 13</div>
-                            <div class="card_content">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-                                eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu.
+    
+        <div class="section_block" id="internships">
+            <div class="section_title"><h2>My Internships</h2></div>
+    
+            <div class="timeline_block">
+    
+                <div class="timeline">
+                    <div class="timeline_line"><div class="line_progress"></div></div>
+    
+                    <div class="timeline_list">
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_logo">2021</div>
+                                <div class="card_date">Season 13</div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">My test season for the title Season 13</div>
+                                <div class="card_content">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_date"><div>Season 12</div></div>
-                            <div class="card_logo"><div>2020</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 12</div>
-                            <div class="card_content">
-                                Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                                nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_date"><div>Season 12</div></div>
+                                <div class="card_logo"><div>2020</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 12</div>
+                                <div class="card_content">
+                                    Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+                                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_logo"><div>2020</div></div>
-                            <div class="card_date"><div>Season 11</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 11</div>
-                            <div class="card_content">
-                                Aenean imperdiet. Etiam ultricies
-                                nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                                Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                                adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                                eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_logo"><div>2020</div></div>
+                                <div class="card_date"><div>Season 11</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 11</div>
+                                <div class="card_content">
+                                    Aenean imperdiet. Etiam ultricies
+                                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
+                                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
+                                    sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
+                                    eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_date"><div>Season 10</div></div>
-                            <div class="card_logo"><div>2019</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 10</div>
-                            <div class="card_content">
-                                Cum sociis natoque penatibus et magnis dis parturient
-                                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_date"><div>Season 10</div></div>
+                                <div class="card_logo"><div>2019</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 10</div>
+                                <div class="card_content">
+                                    Cum sociis natoque penatibus et magnis dis parturient
+                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+                                </div>
                             </div>
                         </div>
+    
                     </div>
-
+    
                 </div>
-
-            </div> -->
+            </div>
+    
         </div>
-
-    </div>
-
-    <div class="section_block" id="projects">
-        <div class="section_title"><h2>My Projects</h2></div>
-        
-        <div class="timeline_block">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit temporibus in corporis sequi excepturi ipsam quo pariatur sed non earum tempora officia unde, fuga error sit necessitatibus repellendus asperiores vero dignissimos, dolorum hic. Illum ea officia autem sint assumenda atque, totam ex laboriosam aut error sapiente molestias deleniti soluta neque accusantium suscipit repellat commodi voluptate in cumque! Ea deleniti ipsam ducimus dolor repellat nesciunt id odit praesentium dolorem saepe assumenda veritatis consequatur doloremque laborum iste, vitae voluptate? Obcaecati nulla exercitationem delectus ducimus dolores ex accusamus minus, voluptates quae eum eaque quisquam autem inventore modi minima adipisci quas tempore corrupti unde maxime dicta. Accusamus quas vel officiis provident repudiandae explicabo? Molestias rerum nam, sed quisquam debitis repellat nesciunt voluptate aut, non itaque enim maxime illum iste dolores error assumenda eum obcaecati. Temporibus, velit quasi facere iure ea praesentium obcaecati. Quidem aperiam, repellat deleniti pariatur inventore molestiae doloremque obcaecati ex, praesentium vero esse delectus animi in, aliquam quis quod. Vel dolor, accusamus debitis corrupti temporibus exercitationem itaque ducimus doloribus reprehenderit nisi porro id quibusdam fugiat dignissimos eligendi magni totam. Repellat voluptate mollitia sed dolor excepturi voluptatem commodi omnis deserunt. Sint rerum quibusdam id aspernatur laudantium quas animi itaque totam nemo quia fuga magnam mollitia nesciunt sit, voluptatibus consequuntur debitis perferendis. Asperiores modi excepturi sequi, assumenda reprehenderit doloremque suscipit iusto placeat? Id repellat atque, quo eius nam odit ipsa incidunt. Eveniet aspernatur libero deserunt, a dolorum illo maxime veniam error quam reiciendis ad nobis nisi nihil repellat veritatis placeat eos nostrum quae exercitationem? Minima, voluptas? Deleniti dicta eaque accusantium nihil aperiam hic tempore quod, voluptatibus minima labore inventore quam sint est aliquam minus sed fuga, eum vero culpa veniam. Cumque beatae sapiente corrupti, porro rem, deserunt sed illo ut, facere natus modi a inventore nisi! Culpa autem possimus ipsa qui? Praesentium tempore sapiente sint quod maiores, voluptatibus ipsum molestias dicta. Esse inventore ullam quas harum alias molestias est sequi maxime dolorum dolorem, saepe quisquam recusandae ad minus aspernatur et eius quam. Eos corporis aut sunt at reiciendis consectetur doloremque a, in quisquam amet dolores, sequi officia error maiores repudiandae, illum nihil unde maxime dignissimos commodi laudantium repellendus quaerat iusto! Reiciendis laboriosam officiis doloribus dignissimos nobis rem hic incidunt earum pariatur iste a mollitia explicabo, quaerat odio. At sapiente voluptatibus soluta officiis. Nemo minima, itaque ratione, id exercitationem ullam porro culpa dicta voluptatum fuga sequi fugiat unde est sit adipisci distinctio magni ipsam animi! Distinctio, architecto libero sapiente eligendi culpa quidem dignissimos consequatur quisquam numquam autem veniam alias, et, soluta veritatis tempore quod ducimus illo doloribus eaque? Consequuntur neque at sint quos corporis delectus quasi numquam cupiditate minima ut? Repellat, cupiditate. Expedita sint enim labore eligendi recusandae similique eum asperiores beatae ipsa, sit dolorum porro aspernatur numquam saepe soluta et maxime excepturi quisquam distinctio corporis, nesciunt nemo libero doloribus. Ab fuga et est laudantium numquam beatae quae sed aperiam, non optio accusamus quasi quia totam, adipisci laboriosam, minus magnam dolore. Laudantium unde doloremque obcaecati praesentium illo aliquam nulla quaerat cupiditate mollitia nobis. Qui minus numquam dolore ea, quibusdam sapiente doloribus molestias reprehenderit eos, deserunt odit sequi. Expedita aliquid corporis fugit omnis sequi nesciunt a ipsam, nisi beatae facilis consequatur dicta aut animi itaque optio minima impedit recusandae fugiat libero quos. Fuga cum sequi doloremque! Assumenda voluptate maxime placeat quas dolores quae totam. Adipisci, eos unde blanditiis ea iste recusandae quis atque dolor modi similique esse, corrupti sunt voluptatem ad odio! Tempora totam vel eligendi veniam aliquid beatae nesciunt hic rerum minima error? Soluta illo architecto autem vel omnis rerum fugiat repellat exercitationem quos voluptatibus ratione accusantium nesciunt temporibus ad, voluptas illum sapiente culpa cum laudantium repudiandae sequi voluptatem impedit! Doloremque consequatur praesentium aut eos libero illo omnis perferendis necessitatibus porro hic veritatis debitis atque, cumque soluta quis fugit reprehenderit. Dolore at numquam, cumque expedita unde eius totam vero suscipit culpa, voluptate aliquam corrupti. Consectetur saepe obcaecati ratione ipsam culpa iste laboriosam veritatis doloremque quod quisquam rem, vel vero soluta illum quibusdam accusantium. Aut doloremque doloribus assumenda qui totam sed ratione. Similique deleniti cupiditate labore atque alias dolores! Voluptatibus atque cupiditate dicta assumenda eveniet quia tempora adipisci neque doloribus natus, deleniti repellendus recusandae saepe culpa nostrum. Quia tempora, recusandae ratione tenetur voluptates iste illo explicabo saepe cupiditate, consequuntur nisi magnam asperiores at rem rerum sunt suscipit quae quis ab soluta pariatur libero similique neque. Corporis unde quibusdam iste modi maiores, dicta illo inventore, eligendi incidunt accusantium tempore quasi possimus nihil officia, molestiae alias veniam! In dignissimos temporibus, vitae et aut sint labore reiciendis magni architecto repellendus praesentium blanditiis assumenda quis quae totam ratione exercitationem illum earum? Officia dolor numquam et placeat quos! Autem pariatur soluta temporibus minus quos ipsum fuga consectetur maiores incidunt molestias. Saepe earum, itaque aliquam debitis distinctio molestiae soluta numquam consectetur ab dolore quas quo veritatis eligendi sint deleniti. Ullam, deleniti incidunt!
-
-            <!-- <div class="timeline">
-
-                <div class="timeline_line"><div class="line_progress"></div></div>
-
-                <div class="timeline_list">
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_logo">2021</div>
-                            <div class="card_date">Season 13</div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">My test season for the title Season 13</div>
-                            <div class="card_content">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-                                eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu.
+    
+        <div class="section_block" id="projects">
+            <div class="section_title"><h2>My Projects</h2></div>
+            
+            <div class="timeline_block">
+    
+                <div class="timeline">
+    
+                    <div class="timeline_line"><div class="line_progress"></div></div>
+    
+                    <div class="timeline_list">
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_logo">2021</div>
+                                <div class="card_date">Season 13</div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">My test season for the title Season 13</div>
+                                <div class="card_content">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_date"><div>Season 12</div></div>
-                            <div class="card_logo"><div>2020</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 12</div>
-                            <div class="card_content">
-                                Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                                nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_date"><div>Season 12</div></div>
+                                <div class="card_logo"><div>2020</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 12</div>
+                                <div class="card_content">
+                                    Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+                                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_logo"><div>2020</div></div>
-                            <div class="card_date"><div>Season 11</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 11</div>
-                            <div class="card_content">
-                                Aenean imperdiet. Etiam ultricies
-                                nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                                Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                                adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                                eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_logo"><div>2020</div></div>
+                                <div class="card_date"><div>Season 11</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 11</div>
+                                <div class="card_content">
+                                    Aenean imperdiet. Etiam ultricies
+                                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
+                                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
+                                    sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
+                                    eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="timeline_item">
-                        <div class="card_info">
-                            <div class="card_date"><div>Season 10</div></div>
-                            <div class="card_logo"><div>2019</div></div>
-                        </div>
-                        <div class="card_item">
-                            <div class="card_title">Season 10</div>
-                            <div class="card_content">
-                                Cum sociis natoque penatibus et magnis dis parturient
-                                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+    
+                        <div class="timeline_item">
+                            <div class="card_info">
+                                <div class="card_date"><div>Season 10</div></div>
+                                <div class="card_logo"><div>2019</div></div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_title">Season 10</div>
+                                <div class="card_content">
+                                    Cum sociis natoque penatibus et magnis dis parturient
+                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+                                </div>
                             </div>
                         </div>
+    
                     </div>
-
+    
                 </div>
-
-            </div> -->
+            </div>
+            
         </div>
-        
     </div>
+
 
 
     <script type="text/javascript" src="data.js"></script>

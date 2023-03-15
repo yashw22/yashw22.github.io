@@ -1,96 +1,137 @@
-var introHeight = $(window).height() - $("#header").outerHeight();
+var headerHeight =  $("#header").outerHeight(),
+    introHeight = $(window).height() - headerHeight;
 $('#intro').height(introHeight);
 
+
 $(document).ready(function() {
-    $('#navbar-btn').on('click', toggleSidebar);
-    $(window).on('scroll', () => {
-        posY = $(window).scrollTop();
-        setIntroHeight();
-        fnUpdateFrame();
-    });
-    $(window).on('resize', () => {
-        introHeight = $(window).height() - $("#header").outerHeight();
-        $('#intro').height(introHeight);
-
-        posY = $(window).scrollTop();
-        windowHeight = $(window).height();
-        fnUpdateFrame();
-    });
-
-
-    var timeline = $('.timeline'),
+    var timelineBlock = $(".timeline_block"),
+        timeline = $('.timeline'),
         timelineLine = $('.timeline_line'),
         lineProgress = $('.line_progress'),
         cardLogo = $('.card_logo'),
-        timelineItem = $('.timeline_item'),
-        windowOuterHeight = $(window).outerHeight(),
-        windowHeight = $(window).height(),
-        posY = $(window).scrollTop(),
-        f = -1,
-        flag = false;
+        timelineItem = $('.timeline_item');
     
-    function fnUpdateFrame() {
-        // flag || requestAnimationFrame(fnUpdateWindow);
-        if(flag==false){ requestAnimationFrame(fnUpdateWindow); }
-        flag = true;
+    var windowOuterHeight = $(window).outerHeight(),
+        // windowHeight = $(window).height(),
+        window3_4 =  3*windowOuterHeight/4;
+        posY = $(window).scrollTop(),
+        oldPosY = -1;
+    
+    var timelineFlag = false,
+        isIntroFlag = true;
+    
+
+    $(document).on('click', (e) => {
+        if(e.target.id!='navbar-btn' && $('#navbar').hasClass('sidebar-active'))
+            toggleSidebar();
+        
+    });
+    
+    $(window).on('scroll', () => {
+        posY = $(window).scrollTop();
+        updateFrame();
+        updateIntroHeight();
+    });
+
+    $(window).on('resize', () => {
+        introHeight = $(window).height() - headerHeight;
+        $('#intro').height(introHeight);
+
+        posY = $(window).scrollTop();
+        // windowHeight = $(window).height();
+        updateFrame();
+    });
+    
+    
+    function updateFrame() {
+        if(timelineFlag==false) requestAnimationFrame(updateWindow); 
+        timelineFlag = true;
+    }
+    function updateWindow() {
+        timelineFlag = false;
+        
+        // timelineLine.css({
+        //     top: timelineItem.first().find(cardLogo).offset().top - timelineItem.first().offset().top,
+        //     bottom: timeline.offset().top + timeline.outerHeight() - timelineItem.last().find(cardLogo).offset().top
+        // });
+        // posY !== oldPosY && (oldPosY = posY, windowHeight, updateProgress());
+        if(posY !== oldPosY) oldPosY = posY; updateProgress();
     }
 
-    function fnUpdateWindow() {
-        flag = false;
+    function updateProgress() {
         
-        timelineLine.css({
-            top: timelineItem.first().find(cardLogo).offset().top - timelineItem.first().offset().top,
-            bottom: timeline.offset().top + timeline.outerHeight() - timelineItem.last().find(cardLogo).offset().top
+        timelineBlock.each(function() {
+            
+            var lastItemTop = $(this).find(timelineItem).last().find(cardLogo).offset().top,
+            progressTop = $(this).find(lineProgress).offset().top,
+            windowMid = posY - progressTop + window3_4;
+            
+            if(lastItemTop <= posY + window3_4) windowMid = lastItemTop - progressTop;
+            $(this).find(lineProgress).css({height: windowMid + "px"});
+    
+            $(this).find(timelineItem).each( function() {
+                var itemTop = $(this).find(cardLogo).offset().top;
+                if(itemTop < posY + window3_4)
+                    $(this).addClass('timeline_item_active');
+                else $(this).removeClass('timeline_item_active');
+            })
+
         });
         
-        f !== posY && (f = posY, windowHeight, fnUpdateProgress());
+
+        // var lastItemTop = timelineItem.last().find(cardLogo).offset().top,
+        // progressTop = lineProgress.offset().top,
+        // windowMid = posY - progressTop + windowOuterHeight/2;
+    
+        // if(lastItemTop <= posY + windowOuterHeight/2) windowMid = lastItemTop - progressTop;
+        // lineProgress.css({height: windowMid + "px"});
+
+        // timelineItem.each( function() {
+        //     var itemTop = $(this).find(cardLogo).offset().top;
+        //     if(itemTop < posY + windowOuterHeight/2) $(this).addClass('timeline_item_active');
+        //     else $(this).removeClass('timeline_item_active');
+        // });
+
+
+        // var agTop = timelineItem.last().find(cardLogo).offset().top;
+        // lastItemTop = agTop + posY - $(window).scrollTop();
+        // progressTop = lineProgress.offset().top + posY - $(window).scrollTop();
+        // windowMid = posY - progressTop + windowOuterHeight / 2;
+        // lastItemTop <= posY + windowOuterHeight / 2 && (windowMid = lastItemTop - progressTop);
+        // lineProgress.css({height: windowMid + "px"});
+        // timelineItem.each(function () {
+        //     var agTop = $(this).find(cardLogo).offset().top;
+        //     (agTop + posY - $(window).scrollTop()) < posY + .5 * windowOuterHeight ? $(this).addClass('timeline_item_active') : $(this).removeClass('timeline_item_active');
+        // })
     }
 
-    function fnUpdateProgress() {
-        var agTop = timelineItem.last().find(cardLogo).offset().top;
-        
-        i = agTop + posY - $(window).scrollTop();
-        a = lineProgress.offset().top + posY - $(window).scrollTop();
-        n = posY - a + windowOuterHeight / 2;
-        i <= posY + windowOuterHeight / 2 && (n = i - a);
-        lineProgress.css({height: n + "px"});
-        
-        timelineItem.each(function () {
-            var agTop = $(this).find(cardLogo).offset().top;
-            (agTop + posY - $(window).scrollTop()) < posY + .5 * windowOuterHeight ? $(this).addClass('timeline_item_active') : $(this).removeClass('timeline_item_active');
-        })
-    }
 
-
-    function setIntroHeight(){
-        if (posY > introHeight) {
+    function updateIntroHeight(){
+        if (isIntroFlag==true && posY > introHeight) {
+            isIntroFlag=false;
             $("#header").addClass("sticky");
-            $('#intro').height(introHeight + $("#header").outerHeight());
-        } else{
+            $('#intro').height(introHeight + headerHeight);
+        }
+        else if(isIntroFlag==false && posY < introHeight){
+            isIntroFlag=true;
             $("#header").removeClass("sticky");
             $('#intro').height(introHeight);
         }
     }
     
+    $('#navbar-btn').on('click', toggleSidebar);
+
     function toggleSidebar(){
         $('#navbar').toggleClass("sidebar-active");
         $('#navbar').toggleClass("sidebar-inactive");
     }
 
     $('.navbar-item').each(function (){
-        // console.log($(this));
         $(this).on('click', (e) => {
             var offset = $($(this).attr('href')).offset();
-            offset.top -= $("#header").outerHeight();
+            offset.top -= headerHeight;
             $('html, body').animate( {scrollTop: offset.top}, 1000);
         });
     });
-    
-    $(document).on('click', (e) => {
-        if(e.target.id!='navbar-btn' && $('#navbar').hasClass('sidebar-active')){
-            toggleSidebar();
-        }
-    });
-
 });
 
