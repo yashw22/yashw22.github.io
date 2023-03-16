@@ -13,34 +13,17 @@
     <div class="bg_section">
         <div class="bg_row"></div>
     </div>
-
-    <script>
-        var bgIconList = ["github_b.png", "gmail_b.png", "insta_b.png", "linkedin_b.png", "whatsapp_b.png" ];
-
-        // 30 icons needed
-        var icon_row ="<div>";
-        for(var rep=0; rep<6; rep++){
-            for (let i = 0; i < bgIconList.length; i++)
-            icon_row += '<img src="dock_icons/' + bgIconList[i] + '">';
-        }
-        icon_row += "</div>";
-        $('.bg_row').html(icon_row + icon_row);
-
-        var row = $('.bg_section').html(), bg = "";
-        for(var i=0; i<24; i++) bg += row;
-        $('.bg_section').html(bg);
-    </script>
     
     <div id="intro">
         <div class="intro_content">
             <h1>Yash Wardhan</h1>
             <p>Stuent | Engineer | Sanawarian</p>
             <div class="dock">
-                <img src="dock_icons/github_b.png">
-                <img src="dock_icons/gmail_b.png">
-                <img src="dock_icons/insta_b.png">
-                <img src="dock_icons/linkedin_b.png">
-                <img src="dock_icons/whatsapp_b.png">
+                <img src="icons/dock_icons/github_b.png">
+                <img src="icons/dock_icons/gmail_b.png">
+                <img src="icons/dock_icons/insta_b.png">
+                <img src="icons/dock_icons/linkedin_b.png">
+                <img src="icons/dock_icons/whatsapp_b.png">
             </div>
         </div>
     </div>
@@ -56,100 +39,15 @@
             <a class="navbar-item" href="#projects">Projects</a>
         </div>
         
-        <img id="navbar-btn" src="images/menu-white.png">
+        <img id="navbar-btn" src="icons/menu-white.png">
     </div>
 
     <div>
+
         <div class="section_block" id="about">
-            <div class="section_title"><h2>About Me</h2></div>
-            
-            <div class="timeline_block">
-                <div class="timeline">
-    
-                    <div class="timeline_line"><div class="line_progress"></div></div>
-    
-                    <div class="timeline_list">
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_logo_box">
-                                    <div class="card_logo">
-                                        <img src="dock_icons/gmail_b.png">
-                                    </div>
-                                </div>
-                                <div class="card_date">Season 13</div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">My test season for the title Season 13</div>
-                                <div class="card_content">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                    vel, aliquet nec, vulputate eget, arcu.
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_date"><div>Season 12</div></div>
-                                <div class="card_logo_box"><div>2020</div></div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">Season 12</div>
-                                <div class="card_content">
-                                    Donec pede justo, fringilla
-                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_logo_box"><div>2020</div></div>
-                                <div class="card_date"><div>Season 11</div></div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">Season 11</div>
-                                <div class="card_content">
-                                    Aenean imperdiet. Etiam ultricies
-                                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                    sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                                    eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_date"><div>Season 10</div></div>
-                                <div class="card_logo_box"><div>2019</div></div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">Season 10</div>
-                                <div class="card_content">
-                                    Cum sociis natoque penatibus et magnis dis parturient
-                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                                </div>
-                            </div>
-                        </div>
-    
-                    </div>
-    
-                </div>
+            <!-- <div class="section_title"><h2>About Me</h2></div> -->
+            <div class="primary_img">
+                <img src="images/yw.jpg">
             </div>
     
         </div>
@@ -164,91 +62,12 @@
             </div>
         </div>
     
-        <!-- <div class="section_block" id="internships">
+        <div class="section_block" id="internships">
             <div class="section_title"><h2>My Internships</h2></div>
-    
             <div class="timeline_block">
-    
                 <div class="timeline">
                     <div class="timeline_line"><div class="line_progress"></div></div>
-    
-                    <div class="timeline_list">
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_logo_box">2021</div>
-                                <div class="card_date">Season 13</div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">My test season for the title Season 13</div>
-                                <div class="card_content">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                    vel, aliquet nec, vulputate eget, arcu.
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_date"><div>Season 12</div></div>
-                                <div class="card_logo_box"><div>2020</div></div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">Season 12</div>
-                                <div class="card_content">
-                                    Donec pede justo, fringilla
-                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_logo_box"><div>2020</div></div>
-                                <div class="card_date"><div>Season 11</div></div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">Season 11</div>
-                                <div class="card_content">
-                                    Aenean imperdiet. Etiam ultricies
-                                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                    sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                                    eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_date"><div>Season 10</div></div>
-                                <div class="card_logo_box"><div>2019</div></div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">Season 10</div>
-                                <div class="card_content">
-                                    Cum sociis natoque penatibus et magnis dis parturient
-                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                                </div>
-                            </div>
-                        </div>
-    
-                    </div>
-    
+                    <div class="timeline_list"></div>
                 </div>
             </div>
     
@@ -256,100 +75,20 @@
     
         <div class="section_block" id="projects">
             <div class="section_title"><h2>My Projects</h2></div>
-            
             <div class="timeline_block">
-    
                 <div class="timeline">
-    
                     <div class="timeline_line"><div class="line_progress"></div></div>
-    
-                    <div class="timeline_list">
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_logo_box">2021</div>
-                                <div class="card_date">Season 13</div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">My test season for the title Season 13</div>
-                                <div class="card_content">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                    vel, aliquet nec, vulputate eget, arcu.
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_date"><div>Season 12</div></div>
-                                <div class="card_logo_box"><div>2020</div></div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">Season 12</div>
-                                <div class="card_content">
-                                    Donec pede justo, fringilla
-                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_logo_box"><div>2020</div></div>
-                                <div class="card_date"><div>Season 11</div></div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">Season 11</div>
-                                <div class="card_content">
-                                    Aenean imperdiet. Etiam ultricies
-                                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                    sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                                    eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="timeline_item">
-                            <div class="card_info">
-                                <div class="card_date"><div>Season 10</div></div>
-                                <div class="card_logo_box"><div>2019</div></div>
-                            </div>
-                            <div class="card_item">
-                                <div class="card_title">Season 10</div>
-                                <div class="card_content">
-                                    Cum sociis natoque penatibus et magnis dis parturient
-                                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                    tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                                </div>
-                            </div>
-                        </div>
-    
-                    </div>
-    
+                    <div class="timeline_list"></div>
                 </div>
             </div>
-            
-        </div> -->
+        </div>
+    
     </div>
 
     <div class="footer">
         
     </div>
-    <div class="author_info">Made using HTML, CSS, JavaScript and JQuery by Yash Wardhan</div>
+    <div class="author_info">Made by Yash Wardhan | using HTML, CSS, JavaScript and JQuery.</div>
 
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="populate.js"></script>
