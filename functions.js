@@ -8,7 +8,7 @@ $(document).ready(function() {
         timeline = $('.timeline'),
         timelineLine = $('.timeline_line'),
         lineProgress = $('.line_progress'),
-        cardLogo = $('.card_logo'),
+        cardLogo = $('.card_logo_box'),
         timelineItem = $('.timeline_item');
     
     var windowOuterHeight = $(window).outerHeight(),

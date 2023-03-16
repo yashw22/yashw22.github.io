@@ -221,29 +221,52 @@
     padding: 0 50% 0 0;
 }
 
-.card_logo {
+.card_logo_box {
     display: inline-block;
     /* margin: 0 14px 0 -28px; */
     margin: 0 14px 0 -25px;
     
     height: 50px;
-    line-height: 50px;
+    /* line-height: 50px; */
     width: 50px;
     box-shadow: 0 0 6px grey;
     background-color: white;
 
-    text-align: center;
-    color: #1d1d1b;
+    /* text-align: center; */
+    /* color: #1d1d1b; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
-.timeline_item:nth-child(2n) .card_logo {
+.card_logo{
+    background-color: white;
+    height: 90%;
+    width: 90%;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_logo img{
+    width: 78%;
+    height: 78%;
+}
+
+
+.timeline_item:nth-child(2n) .card_logo_box {
     /* margin: 0 -28px 0 14px; */
     margin: 0 -25px 0 14px;
 }
-.timeline_item_active .card_logo {
+.timeline_item_active .card_logo_box {
     color: white;
     background-color: black;
 }
@@ -348,14 +371,14 @@
     .card_info, .timeline_item:nth-child(2n) .card_info {
         padding: 0 0 20px;
     }
-    .card_logo, .timeline_item:nth-child(2n) .card_logo {
+    .card_logo_box, .timeline_item:nth-child(2n) .card_logo_box {
         margin: 0 0 0 10px;
         
         height: 40px;
         line-height: 40px;
         width: 40px;
     }
-    /* .card_logo {
+    /* .card_logo_box {
         margin: 0 0 0 10px;
         
         height: 40px;
@@ -499,6 +522,24 @@
     }
     
 }
+
+/* ------------------------------------------------------------ */
+/* ---------------footer properties--------------- */
+/* ------------------------------------------------------------ */
+
+.footer{
+    background-color: #333;
+    height: 200px;
+    z-index: 100;
+}
+.author_info{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 4px;
+    z-index: 100;
+}
+
 
 
 /* ------------------------------------------------------------ */
