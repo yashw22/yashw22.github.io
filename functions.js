@@ -4,6 +4,9 @@ $('#intro').height(introHeight);
 
 
 $(document).ready(function() {
+    alert("Currently upgrading the website. Sorry for the glitches.");
+
+
     var timelineBlock = $(".timeline_block"),
         timeline = $('.timeline'),
         timelineLine = $('.timeline_line'),

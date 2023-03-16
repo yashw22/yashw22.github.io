@@ -10,6 +10,10 @@ data = {
             "major": "Computer Science",
             "minor": "",
             "logo": "rutgers.png",
+            "grade": "GPA: 3.67/4",
+            "desc": [
+                "Operating Systems Design", "Database Management Systems", "Data Structures and Algorithms",
+                "Mathematical Foundations of Data Science", "Introduction to Artificial Intelligence", "Natural Language Processing", ],
         },{
             "school": "Manipal Institute of Technology",
             "location": "Manipal, Karnataka, India",
@@ -19,6 +23,7 @@ data = {
             "major": "Information Technology",
             "minor": "Data Analytics",
             "logo": "manipal.png",
+            "grade": "GPA: 8.68/10",
         },{
             "school": "The Lawrence School, Sanawar",
             "location": "Solan, Himachal Pradesh, India",
@@ -28,6 +33,7 @@ data = {
             "major": "PCM with Economics",
             "minor": "",
             "logo": "sanawar.png",
+            "grade": "Percent: 93.8%",
         }],
     "internships": [
         {
@@ -36,7 +42,7 @@ data = {
             "location": "India (Remote)",
             "from": "Mar '22",
             "to": "Jun '22",
-            "logo": "tcs.png",
+            "logo": "tcs.jpg",
             "desc": ["Built web pages and functionalities to migrate from an outdated platform using Angular Material to incorporate Material Design that provides better UX and high-quality digital experience on the web."],
         },{
             "company": "Rtwo Healthcare Solutions ",
@@ -82,7 +88,7 @@ data = {
             "to": "Oct '22",
             "desc":["Developed a cross-platform social media app using Android Studio, Node.js, and MongoDB enabling users to post personal data to track travel history"]
         },{
-            "title": "Project Autonomous Underwater Vehicle Manipa",
+            "title": "Project Autonomous Underwater Vehicle Manipal",
             "from": "Oct '22",
             "to": "Oct '22",
             "desc":[
@@ -90,4 +96,12 @@ data = {
                 "Studied the working of convolutional neural networks (CNN) and YOLO with computer vision team to implement a model for the detection and classification of objects underwater in real-time." ],
         }
     ],
+    "bg_icon": [
+        "cpp.png", "python.png", "java.png",
+        "js.png", "html.png", "css.png", "bootstrap.png",
+        "react.png", "mongodb.png", "angular.png", "ts.png",
+        "mysql.png", "android.png",
+        "linux.png", "git.png",
+        "db.png",  "api.png",
+        ],
 }
