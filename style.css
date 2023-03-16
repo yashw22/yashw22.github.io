@@ -162,19 +162,25 @@
     box-shadow: 0 0 10px inset black;
 }
 
-#about img{
+.profile_img_div{
     height: 400px;
+}
+
+#about img{
+    position: relative;
+    height: 100%;
+    width: auto;
     border-radius: 12px;
     box-shadow: 0 0 12px black;
 }
 @media only screen and (max-width: 639px){
-    .primary_img{
+    .profile_img_div{
         text-align: center;
     }
 
     #about img{
         /* justify-self: center; */
-        width: 80%;
+        width: 75%;
         height: auto;
     }
 }
