@@ -79,18 +79,18 @@ data = {
             "desc":["Replicated the implementation of a file system and memory allocation that performs data manipulation in memory by creating custom functionalities for standard operations."]
         },{
             "title": "Face Mask Detector",
-            "from": "Oct '22",
-            "to": "Oct '22",
+            "from": "Jun '21",
+            "to": "Jun '21",
             "desc":["Constructed a model using YOLOv3 that categorizes individuals not wearing face masks in real time by transferring learned parameters and further training with a customized data set."]
         },{
             "title": "Travel Journal - Android and Web Application",
-            "from": "Oct '22",
-            "to": "Oct '22",
+            "from": "Feb '21",
+            "to": "May '21",
             "desc":["Developed a cross-platform social media app using Android Studio, Node.js, and MongoDB enabling users to post personal data to track travel history"]
         },{
             "title": "Project Autonomous Underwater Vehicle Manipal",
-            "from": "Oct '22",
-            "to": "Oct '22",
+            "from": "May '21",
+            "to": "Aug '19",
             "desc":[
                 "Implemented ROS to enable AUV components to communicate with each other in required format with minimal latency and error, allowing components to collaborate and complete assigned tasks.",
                 "Studied the working of convolutional neural networks (CNN) and YOLO with computer vision team to implement a model for the detection and classification of objects underwater in real-time." ],

@@ -30,7 +30,7 @@ data.education.forEach(function (item, idx){
     content += '<div class="card_item">';
     content += '<div class="card_title">' + item.school + '</div>';
     content += '<div class="card_subtitle">' + item.location + '</div>';
-    content += '<div class="card_degree">' + item.degree + ", " + item.major + ' (' + item.grade + ')' + '</div>';
+    content += '<div class="card_role">' + item.degree + ", " + item.major + ' (' + item.grade + ')' + '</div>';
     content += '<div class="inner_card_date">' + item.from + " - " + item.to + '</div>';
 
     if('desc' in item){
@@ -69,6 +69,7 @@ data.internships.forEach(function (item, idx){
     content += '<div class="card_item">';
     content += '<div class="card_title">' + item.company + '</div>';
     content += '<div class="card_subtitle">' + item.location + '</div>';
+    content += '<div class="card_role">' + item.role + '</div>';
     content += '<div class="inner_card_date">' + item.from + " - " + item.to + '</div>';
     content += '<div class="card_content">' + ls + '</div>';
     content += '</div>';
@@ -81,6 +82,7 @@ data.projects.forEach(function (item, idx){
     var logo = '<div class="card_logo_box">';
     logo += '<div class="card_logo">';
     // logo += '<img src="icons/logos/' + item.logo + '">';
+    logo += idx + 1;
     logo += '</div>';
     logo += '</div>';
 
