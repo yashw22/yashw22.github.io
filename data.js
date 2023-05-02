@@ -68,6 +68,11 @@ data = {
         }],
     "projects": [
         {
+            "title": "Twitter Database Search Application",
+            "from": "Mar '23",
+            "to": "Apr '23",
+            "desc":["Implemented a search application using Flask that stores Twitter data in MongoDB and MySQL allowing users to search tweets using various filters and strings along with a naive cache layer that improves search query time exponentially"]
+        },{
             "title": "Advanced Encryption Standard",
             "from": "Oct '22",
             "to": "Nov '22",
@@ -103,5 +108,6 @@ data = {
         "mysql.png", "android.png",
         "linux.png", "git.png",
         "db.png",  "api.png",
-        ],
+        "flask.png",
+    ],
 }
