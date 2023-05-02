@@ -656,3 +656,87 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+
+
+/* ------------------------------------------------------------ */
+/* ---------------scroll indicator properties--------------- */
+/* ------------------------------------------------------------ */
+
+
+.scroll_div{
+    margin-top: 350px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.mouse_scroll{
+    /* margin-top: 350px; */
+    width: 2rem;
+    height: 3.5rem;
+    border: solid 2px black;
+    border-radius: 30px;
+    position: relative;
+}
+
+.mouse_scroll::before{
+    content: '';
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: #333;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%);
+    animation: scroll_mouse 2.5s infinite;
+}
+
+.arrow_scroll{
+    /* margin-top: 420px; */
+    position: absolute;
+    height: 1.2rem;
+    left: 50%;
+
+}
+
+.arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.arrow:nth-child(2){
+    animation: arrow1 1.5s ease-in-out infinite;
+}
+.arrow:nth-child(3){
+    animation: arrow2 1.5s ease-in-out infinite;
+}
+
+@keyframes scroll_mouse{
+    0%{
+        bottom: 70%;
+        opacity: 1;
+    }
+    100%{
+        bottom: 10%;
+        opacity: 0;
+    }
+}
+
+@keyframes arrow1{
+    100%{
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes arrow2{
+    100%{
+        top: 50%;
+        opacity: 0;
+    }
+}
