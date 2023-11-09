@@ -12,9 +12,7 @@ $('.bg_section').html(bg);
 
 
 data.about.forEach(function (item,idx){
-    var content = '';
-
-    $('#about_p').append(item);
+    $('#about_p').append(item).append('<br>');
 })
 
 
