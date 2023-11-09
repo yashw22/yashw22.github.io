@@ -23,9 +23,10 @@ data = {
             "logo": "rutgers.png",
             "grade": "GPA: 3.67/4",
             "desc": [
-                "Business Intelligence and Visual Analytics", "Programming Finance", "Advanced Robotics",
-                "Operating Systems Design", "Database Management Systems", "Data Structures and Algorithms",
-                "Mathematical Foundations of Data Science", "Introduction to Artificial Intelligence", "Natural Language Processing", ],
+                "Mathematical Foundations of Data Science", "Data Structures and Algorithms", "Operating Systems Design",
+                "Introduction to Artificial Intelligence", "Database Management Systems", "Natural Language Processing",
+                "Advanced Robotics", "Business Intelligence and Visual Analytics", "Programming Finance"
+            ],
         },{
             "school": "Manipal Institute of Technology",
             "location": "Manipal, Karnataka, India",

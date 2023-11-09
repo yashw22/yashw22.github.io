@@ -11,6 +11,13 @@ for(var i=0; i<24; i++) bg += row;
 $('.bg_section').html(bg);
 
 
+data.about.forEach(function (item,idx){
+    var content = '';
+
+    $('#about_p').append(item);
+})
+
+
 data.education.forEach(function (item, idx){
     var logo = '<div class="card_logo_box">';
     logo += '<div class="card_logo">';
