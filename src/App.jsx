@@ -1,4 +1,5 @@
 // import ThemeBar from "./components/ThemeBar";
+import Cursor from "./components/Cursor";
 import Header from "./header/Header";
 import ResumeBtn from "./resumebtn/ResumeBtn";
 
@@ -9,6 +10,7 @@ export default function App() {
       {/* <ThemeBar /> */}
       <ResumeBtn />
       <div className="text-3xl underline">hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</div>
+      <Cursor />
       <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
       <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
       <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>

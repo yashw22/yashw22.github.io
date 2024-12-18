@@ -6,8 +6,8 @@ import { useRef } from "react";
 export default function NameLogo({ name }) {
   const fullName = name.split(" ");
 
-  const nameLogo = useRef(null);
-  const { contextSafe } = useGSAP({ scope: nameLogo });
+  const nameRef = useRef(null);
+  const { contextSafe } = useGSAP({ scope: nameRef });
   const mouseEnter = contextSafe(() => {
     gsap.to(".name", { width: "auto", duration: 0.5, ease: "power3.inOut" });
   });
@@ -24,13 +24,13 @@ export default function NameLogo({ name }) {
         delay: 2,
       });
     },
-    { scope: nameLogo }
+    { scope: nameRef }
   );
 
   return (
     <div
       className="text-2xl font-bold text-light-text dark:text-dark-text theme-anim flex grow group"
-      ref={nameLogo}
+      ref={nameRef}
       onMouseEnter={() => mouseEnter()}
       onMouseLeave={() => mouseLeave()}
     >
