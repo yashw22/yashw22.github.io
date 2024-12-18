@@ -24,9 +24,9 @@
 }
 
 .header {
-  @apply sticky top-2 z-50 px-5 py-2 mb-4 rounded-lg
-  sm:px-10 lg:px-4 lg:mx-36
-  shadow-success dark:shadow-success
-  bg-light-bg/90 dark:bg-dark-bg/90
+  @apply sticky top-2 z-50 px-5 py-2 mb-4
+  rounded-lg shadow-md backdrop-blur-sm
+  sm:px-10 lg:px-4 lg:mx-36 md:rounded-full
+  /* bg-light-bg dark:bg-dark-bg */
   theme-anim;
 }
