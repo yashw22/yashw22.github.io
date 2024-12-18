@@ -26,12 +26,6 @@ export default function ThemeBtn() {
       <div className="theme-btn-container" onClick={toggleTheme}>
         <div className="theme-btn-ball"></div>
       </div>
-      {/* <button
-        onClick={toggleTheme}
-        className="ml-4 p-2 rounded-md  bg-light-btn text-light-btnTxt dark:bg-dark-btn dark:text-dark-btnTxt"
-      >
-        Toggle Theme
-      </button> */}
     </div>
   );
 }

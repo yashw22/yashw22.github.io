@@ -5,78 +5,45 @@ import ResumeBtn from "./resumebtn/ResumeBtn";
 
 export default function App() {
   return (
-    <div className="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text theme-anim">
+    <div className="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text theme-anim cursor-none">
       <Header />
       {/* <ThemeBar /> */}
       <ResumeBtn />
-      <div className="text-3xl underline">hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</div>
+      <div className="text-3xl underline">hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</div>
       <Cursor />
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Helloooooooooooooooooooooooooooooooooooooooooo</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
-      <div className="text-3xl underline">Hello</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
+      <div className="text-3xl underline">Hellooooooooooooooooo</div>
     </div>
   );
 }
