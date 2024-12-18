@@ -13,7 +13,8 @@
 .theme-btn-container {
   @apply h-10 w-20 rounded-full p-2 flex items-center
   shadow-inner shadow-gray-600 dark:shadow-gray-700
-  bg-[#7cc4ff] dark:bg-[#353a3c];
+  bg-[#7cc4ff] dark:bg-[#353a3c]
+  transition-colors duration-500 ease-in-out;
 }
 
 .theme-btn-ball {

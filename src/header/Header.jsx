@@ -3,21 +3,21 @@ import { RiCloseLargeLine } from "react-icons/ri";
 import HeaderBtn from "./HeaderBtn";
 import NameLogo from "./NameLogo";
 import ThemeBtn from "./ThemeBtn";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { DataContext } from "../helpers/Contexts";
 
 export default function Header() {
+  const data = useContext(DataContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const btns = ["About", "Education", "Internships", "Projects", "Courses"];
-
-  const getHeaderBtns = btns.map((btn, index) => (
+  const getHeaderBtns = data.sections.map((btn, index) => (
     <HeaderBtn key={index} title={btn} />
   ));
 
   return (
     <>
       <div className="header flex items-center justify-between">
-        <NameLogo name="Yash Wardhan" />
+        <NameLogo name={data.name} />
 
         <div className="flex items-center space-x-4 md:hidden">
           <ThemeBtn />
@@ -36,9 +36,14 @@ export default function Header() {
         </div>
       </div>
 
-
       <div
-        className={`z-45 fixed top-0 inset-0 backdrop-blur-md transform transition-transform duration-500 ease-in-out ${
+        onClick={(event) => {
+          const classes = event.target.className.split(" ");
+          if (!classes.includes("headerBtn")) {
+            setMenuOpen(false);
+          }
+        }}
+        className={`z-45 fixed top-0 inset-0 transform transition-transform duration-500 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
