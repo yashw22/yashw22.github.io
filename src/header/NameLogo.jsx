@@ -2,8 +2,10 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import PropTypes from "prop-types";
 import { useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function NameLogo({ name }) {
+  const navigate = useNavigate();
   const fullName = name.split(" ");
 
   const nameRef = useRef(null);
@@ -28,17 +30,26 @@ export default function NameLogo({ name }) {
   );
 
   return (
-    <div
-      className="text-2xl font-bold text-light-text dark:text-dark-text theme-anim flex grow group"
-      ref={nameRef}
-      onMouseEnter={() => mouseEnter()}
-      onMouseLeave={() => mouseLeave()}
+    <Link
+      onClick={(event) => {
+        event.preventDefault();
+        setTimeout(() => {
+          navigate("/");
+        }, 500);
+      }}
     >
-      <div>{fullName[0][0]}</div>
-      <div className="name overflow-hidden">{fullName[0].slice(1)}</div>
-      <div>{fullName[1][0]}</div>
-      <div className="name overflow-hidden">{fullName[1].slice(1)}</div>
-    </div>
+      <div
+        className="text-2xl font-bold text-light-text dark:text-dark-text theme-anim flex group"
+        ref={nameRef}
+        onMouseEnter={() => mouseEnter()}
+        onMouseLeave={() => mouseLeave()}
+      >
+        <div>{fullName[0][0]}</div>
+        <div className="name overflow-hidden">{fullName[0].slice(1)}</div>
+        <div>{fullName[1][0]}</div>
+        <div className="name overflow-hidden">{fullName[1].slice(1)}</div>
+      </div>
+    </Link>
   );
 }
 
