@@ -1,16 +1,17 @@
 import { Fragment, useContext } from "react";
-import { DataContext } from "../helpers/Contexts";
+import { ProfileContext } from "../helpers/Contexts";
 import { FaRegCopyright } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const data = useContext(DataContext);
+  const profile = useContext(ProfileContext);
   return (
     <div className="bottom-0 flex flex-col justify-center flex-1">
       <div>
         <div className="mt-10 flex flex-col items-center justify-center md:flex-row md:justify-around">
-          <div className="text-2xl">{data.name}</div>
+          <div className="text-2xl">{profile.name}</div>
           <div className="my-2 flex space-x-1">
-            {data.links.map((link) => (
+            {profile.links.map((link) => (
               <div key={link}>{link[0]}</div>
             ))}
           </div>
@@ -18,10 +19,12 @@ export default function Footer() {
       </div>
 
       <div className="my-2 text-lg flex items-center justify-center flex-col space-x-0 md:flex-row md:space-x-3">
-        {data.sections.map((link, index) => (
+        {profile.sections.map((link, index) => (
           <Fragment key={link}>
-            <div>{link}</div>
-            {index < data.sections.length - 1 && (
+            <Link to={`/${link}`} className="clickable">
+              {link}
+            </Link>
+            {index < profile.sections.length - 1 && (
               <>
                 <div className="hidden md:inline">/</div>
                 <div className=" border-b-2 w-20 border-light-btn dark:border-dark-btn theme-anim md:hidden"></div>
@@ -33,7 +36,7 @@ export default function Footer() {
 
       <div className="my-2 flex items-center justify-center space-x-1">
         <FaRegCopyright />
-        <div>2024 - Made by {data.name}</div>
+        <div>2024 - Made by {profile.name}</div>
       </div>
     </div>
   );

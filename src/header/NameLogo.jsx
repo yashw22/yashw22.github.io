@@ -31,6 +31,7 @@ export default function NameLogo({ name }) {
 
   return (
     <Link
+    className="clickable cursor-none"
       onClick={(event) => {
         event.preventDefault();
         setTimeout(() => {

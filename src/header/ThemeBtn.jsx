@@ -22,10 +22,8 @@ export default function ThemeBtn() {
   };
 
   return (
-    <div>
-      <div className="theme-btn-container" onClick={toggleTheme}>
-        <div className="theme-btn-ball"></div>
-      </div>
+    <div className="clickable theme-btn-container" onClick={toggleTheme}>
+      <div className="theme-btn-ball"></div>
     </div>
   );
 }

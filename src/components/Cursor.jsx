@@ -1,8 +1,8 @@
 import { memo, useEffect, useRef, useState } from "react";
 
 const Cursor = memo(function Cursor() {
-  const cursorRef = useRef(null);
-  const pointerRef = useRef(null);
+  const dotRef = useRef(null);
+  const circleRef = useRef(null);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
@@ -15,20 +15,47 @@ const Cursor = memo(function Cursor() {
     if (!isTouchDevice) {
       const moveCursor = (event) => {
         const { clientX: mouseX, clientY: mouseY } = event;
-        if (cursorRef.current && pointerRef.current) {
-          cursorRef.current.style.transform = `translate3d(${mouseX - 4}px, ${
-            mouseY - 4
-          }px, 0)`;
-          pointerRef.current.style.transform = `translate3d(${mouseX - 12}px, ${
-            mouseY - 12
-          }px, 0)`;
+        if (dotRef.current && circleRef.current) {
+          dotRef.current.style.transform = `translate3d(${
+            mouseX - dotRef.current.clientWidth / 2
+          }px, ${mouseY - dotRef.current.clientHeight / 2}px, 0)`;
+
+          circleRef.current.style.transform = `translate3d(${
+            mouseX - circleRef.current.clientWidth / 2 - 2
+          }px, ${mouseY - circleRef.current.clientHeight / 2 - 2}px, 0)`;
         }
       };
+      const handlePointerHover = () => {
+        if (circleRef.current) {
+          circleRef.current.classList.add("mouse-hovering");
+        }
+      };
+
+      const handlePointerLeave = () => {
+        if (circleRef.current) {
+          circleRef.current.classList.remove("mouse-hovering");
+        }
+      };
+
       window.addEventListener("mousemove", moveCursor);
+      document.querySelectorAll(".clickable").forEach((element) => {
+        element.addEventListener("mouseenter", handlePointerHover);
+        element.addEventListener("mouseleave", handlePointerLeave);
+      });
 
       return () => {
         window.removeEventListener("mousemove", moveCursor);
+        document.querySelectorAll(".clickable").forEach((element) => {
+          element.removeEventListener("mouseenter", handlePointerHover);
+          element.removeEventListener("mouseleave", handlePointerLeave);
+        });
       };
+
+      // window.addEventListener("mousemove", moveCursor);
+
+      // return () => {
+      //   window.removeEventListener("mousemove", moveCursor);
+      // };
     }
   }, [isTouchDevice]);
 
@@ -39,12 +66,12 @@ const Cursor = memo(function Cursor() {
   return (
     <>
       <div
-        ref={cursorRef}
-        className="z-50 fixed top-0 left-0 w-2 h-2 rounded-full translate-x-[-4em] translate-y-[-4em] bg-black dark:bg-white pointer-events-none"
+        ref={circleRef}
+        className="z-50 fixed top-0 left-0 w-6 h-6 rounded-full translate-x-[-4em] translate-y-[-4em] mix-blend-difference pointer-events-none border-2 transition-all ease-linear"
       ></div>
       <div
-        ref={pointerRef}
-        className="z-50 fixed top-0 left-0 w-6 h-6 rounded-full translate-x-[-4em] translate-y-[-4em] border-black dark:border-white pointer-events-none border-2 transition-transform ease-linear"
+        ref={dotRef}
+        className="z-50 fixed top-0 left-0 w-2 h-2 rounded-full translate-x-[-4em] translate-y-[-4em] bg-white mix-blend-difference pointer-events-none"
       ></div>
     </>
   );
