@@ -10,8 +10,8 @@ export default function Header() {
   const profile = useContext(ProfileContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const getHeaderBtns = profile.sections.map((btn, index) => (
-    <HeaderBtn key={index} title={btn} />
+  const getHeaderBtns = profile.sections.map((section) => (
+    <HeaderBtn key={section.name} section={section} />
   ));
 
   return (

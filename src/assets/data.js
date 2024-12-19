@@ -1,6 +1,11 @@
 export const profile = {
   name: "Yash Wardhan",
-  links: ["Linkedin", "Github", "Instagram", "Mail"],
+  title: "Developer / Life Long Learner",
+  // headline: "Seeking Full-time roles",
+  headline: "I develop code.",
+  description: ["Aspiring Software Engineer passionate about leveraging technology to solve complex problems and drive innovation. I have master’s degree in Computer Science from Rutgers University–New Brunswick, where I strengthened my expertise in core computer science principles and explored diverse fields, including Artificial Intelligence, Networking, and Software Testing.",
+    "A lifelong learner and problem-solver, I’m passionate about staying ahead of technological trends and contributing to impactful, innovative projects. Let’s connect to discuss ideas, opportunities, and exciting ventures in technology!",
+  ],
   resumeUrl: "https://drive.google.com/file/d/1Vu5hhBX__ankyiL24D57fhVOQ73c0V-i/view?usp=drive_link",
   eduacation: [{
     name: "Rutgers, The State University of New Jersey",

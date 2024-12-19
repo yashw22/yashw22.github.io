@@ -36,9 +36,9 @@ export default function Footer() {
 
       <div className="my-2 text-lg flex items-center justify-center flex-col space-x-0 md:flex-row md:space-x-3">
         {profile.sections.map((section, index) => (
-          <Fragment key={section}>
-            <Link to={`/${section}`} className="clickable">
-              {section}
+          <Fragment key={section.name}>
+            <Link to={section.link} className="clickable">
+              {section.name}
             </Link>
             {index < profile.sections.length - 1 && (
               <>

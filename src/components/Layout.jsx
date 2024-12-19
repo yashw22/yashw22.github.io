@@ -9,7 +9,13 @@ import { profile } from "../assets/data";
 
 export default function Layout() {
   const data = profile;
-  data.sections = ["Home", "Education", "Internship", "Project"];
+
+  data.sections = [
+    { name: "Home", link: "/" },
+    { name: "Education", link: "/education" },
+    { name: "Internship", link: "/internship" },
+    { name: "Project", link: "/project" },
+  ];
 
   return (
     <ProfileContext.Provider value={data}>
