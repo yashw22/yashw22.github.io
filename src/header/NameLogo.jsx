@@ -1,37 +1,24 @@
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
 import PropTypes from "prop-types";
-import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
+import { motion } from "framer-motion";
 
 export default function NameLogo({ name }) {
   const navigate = useNavigate();
   const fullName = name.split(" ");
 
-  const nameRef = useRef(null);
-  const { contextSafe } = useGSAP({ scope: nameRef });
-  const mouseEnter = contextSafe(() => {
-    gsap.to(".name", { width: "auto", duration: 0.5, ease: "power3.inOut" });
-  });
-  const mouseLeave = contextSafe(() => {
-    gsap.to(".name", { width: 0, duration: 0.5, ease: "power3.inOut" });
-  });
-
-  useGSAP(
-    () => {
-      gsap.to(".name", {
-        width: 0,
-        duration: 0.5,
-        ease: "power3.inOut",
-        delay: 2,
-      });
+  const nameVariants = {
+    visible: { width: "auto" },
+    hidden: {
+      width: 0,
+      transition: { duration: 0.5, ease: "easeInOut", delay: 1 },
     },
-    { scope: nameRef }
-  );
+    hover: { width: "auto", transition: { duration: 0.5, ease: "easeInOut" } },
+  };
 
   return (
     <Link
-    className="clickable cursor-none"
+      className="clickable cursor-none"
       onClick={(event) => {
         event.preventDefault();
         setTimeout(() => {
@@ -39,17 +26,22 @@ export default function NameLogo({ name }) {
         }, 500);
       }}
     >
-      <div
-        className="text-2xl font-bold text-light-text dark:text-dark-text theme-anim flex group"
-        ref={nameRef}
-        onMouseEnter={() => mouseEnter()}
-        onMouseLeave={() => mouseLeave()}
+      <motion.div
+        className="text-2xl font-bold text-light-text dark:text-dark-text theme-anim flex"
+        initial="visible"
+        animate="hidden"
+        whileHover="hover"
       >
         <div>{fullName[0][0]}</div>
-        <div className="name overflow-hidden">{fullName[0].slice(1)}</div>
+        <motion.div variants={nameVariants} className="name overflow-hidden">
+          {fullName[0].slice(1)}
+        </motion.div>
+
         <div>{fullName[1][0]}</div>
-        <div className="name overflow-hidden">{fullName[1].slice(1)}</div>
-      </div>
+        <motion.div variants={nameVariants} className="name overflow-hidden">
+          {fullName[1].slice(1)}
+        </motion.div>
+      </motion.div>
     </Link>
   );
 }

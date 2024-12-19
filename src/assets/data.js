@@ -152,20 +152,22 @@ export const profile = {
     url: null,
   }],
   link: [{
+    name: "Mail",
+    icon: null,
+    url: "mailto:yashwardhan2210@gmail.com",
+  }, {
     name: "Linkedin",
     icon: null,
-    url: null,
+    url: "https://www.linkedin.com/in/yashw22/",
   }, {
     name: "Github",
     icon: null,
-    url: null,
-  }, {
-    name: "Instagram",
-    icon: null,
-    url: null,
-  }, {
-    name: "Mail",
-    icon: null,
-    url: null,
-  },]
+    url: "https://github.com/yashw22",
+  },
+    // {
+    //   name: "Instagram",
+    //   icon: null,
+    //   url: null,
+    // }
+  ]
 };
