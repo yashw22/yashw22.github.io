@@ -4,7 +4,7 @@ import Pill from "../components/Pill";
 
 export default function HeaderBtn({ section }) {
   return (
-    <Link to={section.link} className="cursor-none">
+    <Link to={section.link} className="clickable">
       <Pill className="headerBtn">{section.name}</Pill>
       {/* <div className="clickable headerBtn rounded-3xl px-4 py-1.5 bg-light-btn text-light-btnTxt dark:bg-dark-btn dark:text-dark-btnTxt theme-anim">
         {section.name}

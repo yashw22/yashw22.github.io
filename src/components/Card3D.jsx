@@ -14,15 +14,15 @@ export const CardContainer = ({ children, className, containerClassName }) => {
       containerRef.current.getBoundingClientRect();
     const x = (e.clientX - left - width / 2) / 25;
     const y = (e.clientY - top - height / 2) / 25;
-    containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+    containerRef.current.style.transform = `rotateY(${x*1.2}deg) rotateX(${y*1.2}deg)`;
   };
 
-  const handleMouseEnter = (e) => {
+  const handleMouseEnter = () => {
     setIsMouseEntered(true);
     if (!containerRef.current) return;
   };
 
-  const handleMouseLeave = (e) => {
+  const handleMouseLeave = () => {
     if (!containerRef.current) return;
     setIsMouseEntered(false);
     containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
@@ -31,10 +31,10 @@ export const CardContainer = ({ children, className, containerClassName }) => {
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
         className={cn(
-          "py-20 flex items-center justify-center",
+          "py-8 flex items-center justify-center",
           containerClassName
         )}
-        style={{ perspective: "1000px" }}
+        style={{ perspective: "500px" }}
       >
         <div
           ref={containerRef}
@@ -63,7 +63,7 @@ export const CardBody = ({ children, className }) => {
   return (
     <div
       className={cn(
-        "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "h-auto w-60 md:w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
         className
       )}
     >
@@ -93,6 +93,7 @@ export const CardItem = ({
 
   useEffect(() => {
     handleAnimations();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMouseEntered]);
 
   const handleAnimations = () => {
@@ -128,7 +129,7 @@ CardItem.propTypes = {
 };
 
 // Create a hook to use the context
-export const useMouseEnter = () => {
+const useMouseEnter = () => {
   const context = useContext(MouseEnterContext);
   if (context === undefined) {
     throw new Error("useMouseEnter must be used within a MouseEnterProvider");

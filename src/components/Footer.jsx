@@ -1,6 +1,6 @@
 import { Fragment, useContext } from "react";
 import { ProfileContext } from "../helpers/Contexts";
-import { FaGithub, FaLinkedinIn, FaRegCopyright } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { IoIosMail } from "react-icons/io";
 
@@ -9,7 +9,10 @@ export default function Footer() {
 
   const getLinks = (links) => {
     return links.map((link) => (
-      <a key={link.name} href={link.url} rel="noreferrer">
+      <a className="clickable group relative" key={link.name} href={link.url} rel="noreferrer">
+        <span className="absolute text-md rounded-md px-2 -top-full left-1/2 -translate-x-1/2 bg-light-btn dark:bg-dark-btn text-light-btnTxt dark:text-dark-btnTxt scale-0 opacity-0 transform group-hover:opacity-100 group-hover:scale-100 hover-anim">
+          {link.name}
+        </span>
         {link.name === "Mail" ? (
           <IoIosMail className="w-8 h-8" />
         ) : link.name === "Linkedin" ? (
@@ -27,9 +30,9 @@ export default function Footer() {
     <div className="bottom-0 flex flex-col justify-center flex-1">
       <div>
         <div className="mt-10 flex flex-col items-center justify-center md:flex-row md:justify-evenly">
-          <div className="text-2xl">{profile.name}</div>
+          {/* <div className="text-2xl">{profile.name}</div> */}
           <div className="my-2 flex space-x-2 items-center">
-            {getLinks(profile.link)}
+            {getLinks(profile.links)}
           </div>
         </div>
       </div>
@@ -50,8 +53,8 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="my-2 flex items-center justify-center space-x-1">
-        <FaRegCopyright />
+      <div className="my-2 mb-10 flex items-center justify-center space-x-1">
+        {/* <FaRegCopyright /> */}
         <div>2024 - Made by {profile.name}</div>
       </div>
     </div>

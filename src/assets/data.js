@@ -3,12 +3,13 @@ export const profile = {
   title: "Developer / Life Long Learner",
   // headline: "Seeking Full-time roles",
   headline: "I develop code.",
-  description: ["Aspiring Software Engineer passionate about leveraging technology to solve complex problems and drive innovation. I have master’s degree in Computer Science from Rutgers University–New Brunswick, where I strengthened my expertise in core computer science principles and explored diverse fields, including Artificial Intelligence, Networking, and Software Testing.",
+  description: ["Aspiring Software Engineer passionate about leveraging technology to solve complex problems and drive innovation. I have master’s degree in Computer Science from Rutgers University–New Brunswick, where I strengthened my expertise in core computer science principles and explored diverse fields, including Cloud, Artificial Intelligence, Networking, and Software Testing.",
     "A lifelong learner and problem-solver, I’m passionate about staying ahead of technological trends and contributing to impactful, innovative projects. Let’s connect to discuss ideas, opportunities, and exciting ventures in technology!",
   ],
-  
+
   resumeUrl: "https://drive.google.com/file/d/1Vu5hhBX__ankyiL24D57fhVOQ73c0V-i/view?usp=drive_link",
-  mailUrl: "mailto:yashwardhan2210@gmail.com",
+  mailId: "yashwardhan2210@gmail.com",
+  toolsFocus: ["react", "python", "javascript", "java", "c++"],
 
   eduacation: [{
     name: "Rutgers, The State University of New Jersey",
@@ -43,8 +44,8 @@ export const profile = {
     icon: null,
     url: null,
   }],
-  experience: [],
-  internship: [{
+  experiences: [],
+  internships: [{
     company: "Acts Retirement-Life Communities",
     location: "Fort Washington, PA",
     role: "Data Analyst",
@@ -57,9 +58,9 @@ export const profile = {
       "Wrote SQL procedures on SSMS to create data workflows that parse JSON and store them as tables that enable efficient analysis and reporting across organization.",
       "Designed Power BI dashboards and reports with dynamic visuals and drill-through functionalities allowing informed decision-making by providing key insights into performance metrics."
     ],
-    icon: null,
-    url: null,
-    stack: [],
+    icon: "/logos/acts.png",
+    url: "https://www.linkedin.com/company/actsretirement/",
+    stack: ["MS SQL Server", "Power BI", "DAX", "T-SQL", "Jira", "Agile Methodologies", "MS Power Query"],
   }, {
     company: "RTWO Healthcare Solutions",
     location: "Bangalore, India",
@@ -74,11 +75,11 @@ export const profile = {
       "Leveraged microcontrollers and RFID cards to streamline equipment assignment, reducing manual effort and minimizing errors.",
       "Implemented RESTful API endpoints for efficient data retrieval, RFID scanner integration, and real-time equipment tracking, ensuring a robust and scalable backend."
     ],
-    icon: null,
-    url: null,
-    stack: [],
+    icon: "/logos/rtwo.png",
+    url: "https://www.linkedin.com/company/rtwo-healthcare-solutions/",
+    stack: ["React", "Node.js", "C", "Arduino", "MERN", "REST APIs"],
   }],
-  project: [{
+  projects: [{
     title: "Deck Detective",
     startMonth: "November",
     startYear: "2024",
@@ -89,9 +90,9 @@ export const profile = {
       "Engineered a peer-to-peer, turn-based multiplayer web application using React, leveraging PeerJS and WebRTC for real-time communication.",
       "Implemented a lightweight signaling server on Render to facilitate initial peer discovery and connection, enabling a decentralized architecture.",
       "Hosted the app on GitHub Pages, with game logic executed locally on each peer, ensuring smooth game progression based on individual turns."],
-    icon: null,
-    link: null,
-    stack: [],
+    icon: "/projects/dd.jpg",
+    url: "https://github.com/yashw22/deck-detective",
+    stack: ["React", "PeerJS", "JavaScript", "GitHub", "Git", "WebRTC"],
   }, {
     title: "Robot Navigation using Reinforcement Learning",
     startMonth: "September",
@@ -102,9 +103,9 @@ export const profile = {
     description: [
       "Utilized model-free reinforcement learning to train a neural network, that enables Unitree Go1 robot to navigate autonomously and avoid obstacles in complex environments within the Isaac Gym Simulator.", "Implemented a lightweight signaling server on Render to facilitate initial peer discovery and connection, enabling a decentralized and scalable architecture.",
     ],
-    icon: null,
-    link: null,
-    stack: [],
+    icon: "/projects/rl.jpg",
+    url: "https://github.com/yashw22/go1_gym_simulation",
+    stack: ["Reinforcement Learning", "PyTorch", "Python", "Isaac Gym", "NumPy"],
   }, {
     title: "Tweet Search Application",
     startMonth: "March",
@@ -116,9 +117,51 @@ export const profile = {
       "Developed a Flask-based search application with integrated MongoDB and MySQL support, enabling users to perform keyword and filter-based searches on tweets.",
       "Implemented a naive and efficient caching mechanism locally to optimize performance, significantly reducing response times for subsequent queries.",
     ],
+    icon: "/projects/tweetapp.png",
+    url: "https://github.com/yashw22/TwitterDB",
+    stack: ["Python", "MongoDB", "MySQL", "Flask", "REST APIs", "SQL"],
+  }, {
+    title: "Visualizing AES Functions in Python",
+    startMonth: "October",
+    startYear: "2022",
+    current: false,
+    endMonth: "November",
+    endYear: "2022",
+    description: [
+      "Implemented AES encryption and decryption algorithms, replicating the four core operations (SubBytes, ShiftRows, MixColumns, AddRoundKey) and their corresponding inverses for each AES round, using user-specified keys and parameters.",
+      "Developed interactive prompts to allow users to visualize the step-by-step execution of each AES operation, enhancing understanding of the cryptographic process."
+    ],
     icon: null,
-    link: null,
-    stack: [],
+    url: null,
+    stack: ["Python", "AES"],
+  }, {
+    title: "Real-time Face Mask Detection",
+    startMonth: "June",
+    startYear: "2021",
+    current: false,
+    endMonth: "June",
+    endYear: "2021",
+    description: [
+      "Developed an image recognition model using YOLOv3 to identify individuals not wearing face masks in real-time.",
+      "Leveraged transfer learning by fine-tuning pre-trained parameters with a customized dataset for enhanced accuracy."
+    ],
+    icon: null,
+    url: "https://github.com/yashw22/FaceMask-Detection",
+    stack: ["OpenCV", "YOLO", "TensorFlow", "Python"],
+  }, {
+    title: "Travel Journal",
+    startMonth: "February",
+    startYear: "2021",
+    current: false,
+    endMonth: "June",
+    endYear: "2021",
+    description: [
+      "Developed a cross-platform social media application that allows users to share travel experiences and interact with others' posts.",
+      "Designed and implemented distinct mobile and web platforms to deliver a seamless and tailored user experience for each medium.",
+    ],
+    icon: null,
+    url: "https://github.com/yashw22/TravelJournal-FrontEnd",
+    stack: ["Android Studio", "Node.js", "Java", "JavaScript", "XML", "JSON"],
   }, {
     title: "Project Autonomous Underwater Vehicle Manipal",
     startMonth: "August",
@@ -128,13 +171,13 @@ export const profile = {
     endYear: "2021",
     description: [
       "Leveraged Robot Operating System (ROS) to enable seamless communication among AUV components, ensuring efficient and timely data exchange to support the successful completion of assigned tasks.",
-      "Collaborated with the Computer Vision (CV) team to investigate the functionality of Convolutional Neural Networks (CNNs) and YOLO for developing a real-time model capable of detecting and classifying underwater objects,"
+      "Collaborated with the Computer Vision (CV) team to investigate the functionality of Convolutional Neural Networks (CNNs) and YOLO for developing a real-time model capable of detecting and classifying underwater objects."
     ],
     icon: null,
-    link: null,
-    stack: [],
+    url: null,
+    stack: ["ROS", "TensorFlow", "CNN", "OpenCV", "YOLO", "Python", "C++"],
   }],
-  certification: [{
+  certifications: [{
     title: "Design Patterns in Java",
     source: "Udemy",
     description: [],
@@ -159,7 +202,7 @@ export const profile = {
     icon: null,
     url: null,
   }],
-  link: [{
+  links: [{
     name: "Mail",
     icon: null,
     url: "mailto:yashwardhan2210@gmail.com",

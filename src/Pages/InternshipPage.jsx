@@ -1,31 +1,25 @@
 // import { CardStack } from "../components/CardStack";
 
+import { useContext } from "react";
+import { ProfileContext } from "../helpers/Contexts";
+import InternshipCard from "../components/InternshipCard";
+
 export default function InternshipPage() {
+  const profile = useContext(ProfileContext);
+
   return (
-    <div className="h-[40rem] flex items-center justify-center w-full">
-      Internship
-      {/* <CardStack
-        items={CARDS}
-        containerClass="relative h-60 w-60 md:h-60 md:w-96"
-        cardClass="absolute dark:bg-black bg-white h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between"
-        linkClass="font-normal text-neutral-700 dark:text-neutral-200"
-        nameClass="text-neutral-400 font-normal dark:text-neutral-200"
-      /> */}
+    <div className="m-4 mt-12 justify-self-center md:w-[80%] 2xl:w-[60%]">
+      <div>
+        {profile.internships.map((intern, idx) => (
+          <InternshipCard key={idx} intern={intern} />
+        ))}
+      </div>
     </div>
   );
-}
 
-// const CARDS = [
-//   {
-//     name: "React",
-//     link: "Senior Software Engineer",
-//   },
-//   {
-//     name: "JavaScript",
-//     link: "Senior Shitposter",
-//   },
-//   {
-//     name: "ThreeJS",
-//     link: "Manager Project Mayhem",
-//   },
-// ];
+  // return (
+  //   <div className="m-4 mt-10 justify-self-center flex flex-col md:w-[80%] 2xl:w-[70%] bg-blue-500">
+  //     Internship
+  //   </div>
+  // );
+}

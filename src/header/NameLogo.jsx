@@ -42,7 +42,7 @@ export default function NameLogo({ name }) {
         <div>{fullName[0][0]}</div>
         <AnimatePresence>
           {isVisible && (
-            <motion.div {...animateProps} className="name overflow-hidden">
+            <motion.div {...animateProps} className="overflow-hidden">
               {fullName[0].slice(1)}
             </motion.div>
           )}
@@ -51,7 +51,7 @@ export default function NameLogo({ name }) {
         <div>{fullName[1][0]}</div>
         <AnimatePresence>
           {isVisible && (
-            <motion.div {...animateProps} className="name overflow-hidden">
+            <motion.div {...animateProps} className="overflow-hidden">
               {fullName[1].slice(1)}
             </motion.div>
           )}

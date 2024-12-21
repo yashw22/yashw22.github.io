@@ -1,43 +1,26 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import PropTypes from "prop-types";
+import Pill from "./Pill";
 
-// usecase
-
-// <div className="max-w-5xl mx-auto px-8">
-//         <HoverEffect
-//           items={projects}
-//           className=""
-//           cardContainerClass="relative  block p-2 h-full w-full group"
-//           hoverClass="absolute inset-0 h-full w-full block rounded-3xl bg-black"
-//           cardClass="clickable bg-white dark:bg-black rounded-2xl p-4 overflow-hidden group-hover:border-slate-700 relative z-20"
-//           textClass="font-bold tracking-wide"
-//         />
-//       </div>
-
-export const HoverEffect = ({
-  items,
-  className,
-  cardContainerClass,
-  hoverClass,
-  cardClass,
-  textClass,
-}) => {
+export const HoverEffect = ({ items }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className={className}>
+    <div className="bg-red-500 flex">
       {items.map((item, idx) => (
         <div
           key={item.text}
-          className={cardContainerClass}
+          className="relative  block p-2 h-full w-full group"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
+          <Pill className="z-20" enabled={item.enabled}>{item.text}</Pill>
+
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className={hoverClass}
+                className="absolute inset-0 rounded-3xl bg-black z-10"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -46,14 +29,19 @@ export const HoverEffect = ({
                 }}
                 exit={{
                   opacity: 0,
-                  transition: { duration: 0.15, delay: 0.5 },
+                  transition: { duration: 0.15 },
                 }}
               />
             )}
           </AnimatePresence>
-          <div className={cardClass}>
-            <div className={textClass}>{item.text}</div>
-          </div>
+          {/* className={cn(
+        "clickable rounded-3xl px-4 py-1.5 bg-light-btn text-light-btnTxt dark:bg-dark-btn dark:text-dark-btnTxt theme-anim flex items-center justify-center",
+        className,
+        enabled ? "bg-success" : "bg-light-btn  dark:bg-dark-btn"
+      )} */}
+          {/* <div className="clickable bg-white dark:bg-black rounded-2xl overflow-hidden group-hover:border-slate-700 relative z-20">
+            <div className="font-bold tracking-wide">{item.text}</div>
+          </div> */}
         </div>
       ))}
     </div>
@@ -63,11 +51,8 @@ HoverEffect.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
+      enabled: PropTypes.bool.isRequired,
     })
   ).isRequired,
-  className: PropTypes.string,
-  cardContainerClass: PropTypes.string,
-  hoverClass: PropTypes.string,
-  cardClass: PropTypes.string,
-  textClass: PropTypes.string,
+  handleClick: PropTypes.func.isRequired,
 };

@@ -40,11 +40,11 @@ export default function Header() {
         onClick={(event) => {
           if (!event.target.classList.contains("headerBtn")) setMenuOpen(false);
         }}
-        className={`z-45 fixed top-0 inset-0 transform transition-transform duration-500 ease-in-out ${
+        className={`z-[100] fixed backdrop-blur-sm top-0 inset-0 transform transition-transform duration-500 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="fixed mt-20 right-6 flex flex-col items-end space-y-2 md:hidden">
+        <div className="fixed mt-20 right-6 flex flex-col items-end space-y-4 md:hidden">
           {getHeaderBtns}
         </div>
       </div>

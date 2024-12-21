@@ -11,6 +11,7 @@ export default {
         warning: '#F97316',
         success: '#22C55E',
         error: '#EF4444',
+
         light: {
           btn: '#1F2937',
           btnTxt: '#E5E7EB',
@@ -19,6 +20,9 @@ export default {
           text: '#111827',
           accent: '#3B82F6',
           secondaryAccent: '#10B981',
+          card: '#1F2937',
+          cardText: '#E5E7EB',
+          cardBorder: '#22C55E',
         },
         dark: {
           btn: '#E5E7EB',
@@ -28,6 +32,9 @@ export default {
           text: '#D1D5DB',
           accent: '#3B82F6',
           secondaryAccent: '#10B981',
+          card: '#E5E7EB',
+          cardText: '#1F2937',
+          cardBorder: '#22C55E',
         },
       }
 

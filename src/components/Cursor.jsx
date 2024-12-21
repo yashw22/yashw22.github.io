@@ -1,9 +1,11 @@
 import { memo, useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Cursor = memo(function Cursor() {
   const dotRef = useRef(null);
   const circleRef = useRef(null);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     setIsTouchDevice(
@@ -50,14 +52,8 @@ const Cursor = memo(function Cursor() {
           element.removeEventListener("mouseleave", handlePointerLeave);
         });
       };
-
-      // window.addEventListener("mousemove", moveCursor);
-
-      // return () => {
-      //   window.removeEventListener("mousemove", moveCursor);
-      // };
     }
-  }, [isTouchDevice]);
+  }, [isTouchDevice, location]);
 
   if (isTouchDevice) {
     return null;
@@ -67,11 +63,11 @@ const Cursor = memo(function Cursor() {
     <>
       <div
         ref={circleRef}
-        className="z-50 fixed top-0 left-0 w-6 h-6 rounded-full translate-x-[-4em] translate-y-[-4em] mix-blend-difference pointer-events-none border-2 transition-all ease-linear"
+        className="z-[200] fixed top-0 left-0 w-6 h-6 rounded-full translate-x-[-4em] translate-y-[-4em] mix-blend-difference pointer-events-none border-2 transition-all ease-linear"
       ></div>
       <div
         ref={dotRef}
-        className="z-50 fixed top-0 left-0 w-2 h-2 rounded-full translate-x-[-4em] translate-y-[-4em] bg-white mix-blend-difference pointer-events-none"
+        className="z-[200] fixed top-0 left-0 w-2 h-2 rounded-full translate-x-[-4em] translate-y-[-4em] bg-white mix-blend-difference pointer-events-none"
       ></div>
     </>
   );

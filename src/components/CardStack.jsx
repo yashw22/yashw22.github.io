@@ -4,13 +4,7 @@ import PropTypes from "prop-types";
 
 var interval;
 
-export const CardStack = ({
-  items,
-  containerClass,
-  cardClass,
-  offset,
-  scaleFactor,
-}) => {
+export const CardStack = ({ items, offset, scaleFactor }) => {
   const CARD_OFFSET = offset || 10;
   const SCALE_FACTOR = scaleFactor || 0.06;
   const [cards, setCards] = useState(items);
@@ -32,11 +26,11 @@ export const CardStack = ({
   };
 
   return (
-    <div className={containerClass}>
-      {cards.map((card, index) => (
+    <div className="relative h-60 w-60 md:w-80">
+      {cards.map((tool, index) => (
         <motion.div
-          key={card.name}
-          className={cardClass}
+          key={tool}
+          className="absolute p-4 w-full h-full backdrop-blur-3xl rounded-3xl border-2 border-light-btn/20 dark:border-dark-btn/20 flex flex-col items-center justify-around"
           style={{ transformOrigin: "top center" }}
           animate={{
             top: index * -CARD_OFFSET,
@@ -45,8 +39,8 @@ export const CardStack = ({
           }}
           transition={{ duration: 0.5 }}
         >
-          <div>{card.link}</div>
-          <div>{card.name}</div>
+          <img src={`/tools/${tool}.png`} className="h-40 w-auto" />
+          <div>{tool}</div>
         </motion.div>
       ))}
     </div>
@@ -54,14 +48,7 @@ export const CardStack = ({
 };
 
 CardStack.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  containerClass: PropTypes.string.isRequired,
-  cardClass: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
   offset: PropTypes.number,
   scaleFactor: PropTypes.number,
 };
