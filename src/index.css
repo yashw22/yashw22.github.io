@@ -25,7 +25,7 @@
 }
 
 .header {
-  @apply sticky top-0 md:top-2 z-[120] px-5 py-2 mb-4
+  @apply sticky top-0 md:top-2 z-[110] px-5 py-2 mb-4
   rounded-lg shadow-md backdrop-blur-md
   sm:px-10 lg:px-4 lg:mx-36 md:rounded-full
   /* bg-light-bg dark:bg-dark-bg */

@@ -9,17 +9,13 @@ export default function InternshipPage() {
 
   return (
     <div className="m-4 mt-12 justify-self-center md:w-[80%] 2xl:w-[60%]">
-      <div>
+      <div className="text-5xl my-2 text-center">Internships</div>
+
+      <div className="my-8">
         {profile.internships.map((intern, idx) => (
           <InternshipCard key={idx} intern={intern} />
         ))}
       </div>
     </div>
   );
-
-  // return (
-  //   <div className="m-4 mt-10 justify-self-center flex flex-col md:w-[80%] 2xl:w-[70%] bg-blue-500">
-  //     Internship
-  //   </div>
-  // );
 }

@@ -40,7 +40,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
           transition={{ duration: 0.5 }}
         >
           <img src={`/tools/${tool}.png`} className="h-40 w-auto" />
-          <div>{tool}</div>
+          <div>{tool.toUpperCase()}</div>
         </motion.div>
       ))}
     </div>

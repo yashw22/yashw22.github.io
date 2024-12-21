@@ -6,6 +6,7 @@ import ResumeBtn from "./ResumeBtn";
 import { ProfileContext } from "../helpers/Contexts";
 import { Outlet } from "react-router-dom";
 import { profile } from "../assets/data";
+import Background from "./Background";
 
 export default function Layout() {
   const data = profile;
@@ -19,7 +20,8 @@ export default function Layout() {
 
   return (
     <ProfileContext.Provider value={data}>
-      <div className="fixed w-full h-full overflow-x-hidden bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text theme-anim cursor-none">
+      <div className="fixed w-full h-full overflow-x-hidden bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text theme-anim cursor-none font-mono">
+        {/* <Background /> */}
         <Header />
         <Cursor />
         <ResumeBtn />

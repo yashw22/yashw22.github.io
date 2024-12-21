@@ -5,23 +5,30 @@ export default function InternshipCard({ intern }) {
   return (
     <div className="m-2 mb-4 lg:mb-12 p-4 rounded-xl flex flex-col md:flex-row justify-center items-center border-2 border-light-cardBorder dark:border-dark-cardBorder bg-light-card dark:bg-dark-card text-light-cardText dark:text-dark-cardText">
       <div className="flex-shrink-0 mb-4 lg:mb-0 md:mr-4">
-        <img
-          src={intern.icon}
-          className="h-auto max-w-[100px] lg:max-w-[150px]"
-          alt={`${intern.company} logo`}
-        />
+        <a href={intern.url} rel="noreferrer" className="clickable">
+          <img
+            src={intern.icon}
+            className="h-auto max-w-[100px] lg:max-w-[150px]"
+            alt={`${intern.company} logo`}
+          />
+        </a>
       </div>
       <div>
-        <div className="text-2xl">{intern.company}</div>
-        <div className="text-xl font-bold">{intern.role}</div>
-        <div>
+        <div className="text-2xl">
+          <a href={intern.url} rel="noreferrer" className="clickable">
+            {intern.company}
+          </a>
+          <span className="text-sm">{intern.location}</span>
+        </div>
+        <div className="w-full = flex justify-end">
           {`${intern.startMonth} ${intern.startYear} - `}
           {intern.current ? "present" : `${intern.endMonth} ${intern.endYear}`}
         </div>
+        <div className="text-xl font-bold">{intern.role}</div>
         <ul className="text-md lg:text-lg list-disc pl-5">
           {intern.description.map((desc, idx) => (
             <div key={idx}>
-              <li>{desc}</li>
+              <li className="text-justify">{desc}</li>
             </div>
           ))}
         </ul>

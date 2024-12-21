@@ -6,17 +6,17 @@ export default function ProjectCard({ project }) {
   return (
     <CardContainer>
       <CardBody className="clickable group/card">
-        <CardItem translateZ="100" className="text-2xl mb-2">
+        <CardItem translateZ="100" className="text-xl md:text-2xl mb-2">
           {project.title}
         </CardItem>
-        <CardItem translateZ="50" className="w-full">
+        <CardItem translateZ="50" className="w-full mb-1">
           <img
             src={project.icon}
-            className="h-auto w-full object-cover rounded-xl "
+            className="h-auto w-full object-cover rounded-xl"
           />
         </CardItem>
 
-        <CardItem translateZ="80" className="">
+        <CardItem translateZ="80">
           {project.current
             ? "Construction in progress..."
             : `${project.endMonth} ${project.endYear}`}
@@ -27,7 +27,7 @@ export default function ProjectCard({ project }) {
         >
           {project.stack.map((tool) => (
             <div key={tool} className="mt-2">
-              <Pill>{tool}</Pill>
+              <Pill className="text-sm md:text-md">{tool}</Pill>
             </div>
           ))}
         </CardItem>

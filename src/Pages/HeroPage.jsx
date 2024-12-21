@@ -4,6 +4,7 @@ import { ProfileContext } from "../helpers/Contexts";
 import { CardStack } from "../components/CardStack";
 import Pill from "../components/Pill";
 import { RiMailSendLine } from "react-icons/ri";
+import TextMorph from "../components/TextMorph";
 
 export default function HeroPage() {
   const profile = useContext(ProfileContext);
@@ -11,14 +12,17 @@ export default function HeroPage() {
     <div className="m-4 justify-self-center flex flex-col md:w-[80%] 2xl:w-[70%]">
       <div className="md:h-[80vh] flex flex-col md:flex-row">
         <div className="md:w-[50%] h-[90vh] md:h-auto flex flex-col justify-center items-start">
-          <div className="text-5xl">
+          <div className="text-5xl mb-5">
             Hi, my name is <span>{profile.name}</span>
           </div>
-          <div className="mt-5 text-4xl">{profile.headline}</div>
+          <TextMorph
+            start={profile.headlineStart}
+            phrases={profile.headlineList}
+          />
         </div>
-        <div className="md:w-[50%] h-[90vh] md:h-auto flex justify-center items-center">
+        {/* <div className="md:w-[50%] h-[90vh] md:h-auto flex justify-center items-center">
           3d content
-        </div>
+        </div> */}
       </div>
 
       <div className="md:h-[60vh] flex flex-col md:flex-row">
@@ -32,11 +36,7 @@ export default function HeroPage() {
           ))}
         </div>
         <div className="md:w-[50%] h-[90vh] md:h-auto flex justify-center items-center">
-          <CardStack
-            items={profile.toolsFocus}
-            offset={12}
-            scaleFactor={0.1}
-          />
+          <CardStack items={profile.toolsFocus} offset={12} scaleFactor={0.1} />
         </div>
       </div>
 

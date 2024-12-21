@@ -1,12 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ProfileContext } from "../helpers/Contexts";
 import ProjectCard from "../components/ProjectCard";
+import ProjectDetailModal from "../components/ProjectDetailModal";
+import { AnimatePresence } from "framer-motion";
 // import Pill from "../components/Pill";
 // import { AnimatePresence, motion } from "framer-motion";
 // import { HoverEffect } from "../components/ItemsHoverEffect";
 
 export default function ProjectPage() {
   const profile = useContext(ProfileContext);
+  const [isModal, setIsModal] = useState(false);
+  const [projectIdx, setProjectIdx] = useState();
   // const [filterIsOpen, setFilterIsOpen] = useState(true);
   // const [filterStack, setFilterStack] = useState([]);
 
@@ -28,8 +32,24 @@ export default function ProjectPage() {
   //   }));
   // };
 
+  const handleCardClick = (idx) => {
+    setProjectIdx(idx);
+    setIsModal(true);
+  };
+
   return (
     <div className="m-4 mt-12 justify-self-center md:w-[80%] 2xl:w-[70%]">
+      <AnimatePresence>
+        {isModal && (
+          <ProjectDetailModal
+            project={profile.projects[projectIdx]}
+            closeModal={() => setIsModal(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      <div className="text-5xl my-2 text-center">My Projects</div>
+
       <div className="flex flex-col justify-center items-center">
         {profile.projects.map((project, idx) => (
           <div
@@ -37,6 +57,7 @@ export default function ProjectPage() {
             className={`m-2 w-80 md:w-96 px-2 ${
               idx % 2 === 0 ? "lg:translate-x-[70%]" : "lg:-translate-x-[70%]"
             }`}
+            onClick={() => handleCardClick(idx)}
           >
             <ProjectCard project={project} />
           </div>
