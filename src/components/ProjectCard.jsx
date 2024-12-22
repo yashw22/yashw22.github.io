@@ -9,12 +9,14 @@ export default function ProjectCard({ project }) {
         <CardItem translateZ="100" className="text-xl md:text-2xl mb-2">
           {project.title}
         </CardItem>
-        <CardItem translateZ="50" className="w-full mb-1">
-          <img
-            src={project.icon}
-            className="h-auto w-full object-cover rounded-xl"
-          />
-        </CardItem>
+        {project.icon && (
+          <CardItem translateZ="50" className="w-full mb-1">
+            <img
+              src={import.meta.env.BASE_URL + project.icon}
+              className="h-auto w-full object-cover rounded-xl"
+            />
+          </CardItem>
+        )}
 
         <CardItem translateZ="80">
           {project.current

@@ -5,7 +5,7 @@ export default function EducationCard({ edu }) {
   return (
     <CardContainer>
       <CardBody className="clickable group/card p-2 border-2 rounded-xl border-light-text/60 dark:border-dark-text">
-      <CardItem translateZ="100" className="text-xl md:text-2xl mb-1">
+        <CardItem translateZ="100" className="text-xl md:text-2xl mb-1">
           {edu.name} <span className="text-sm">{edu.location}</span>
         </CardItem>
         <CardItem translateZ="80" className="text-sm mb-2">
@@ -15,15 +15,17 @@ export default function EducationCard({ edu }) {
           {edu.current ? "Present" : `${edu.endMonth} ${edu.endYear}`}
           {/* </div> */}
         </CardItem>
-        <CardItem
-          translateZ="50"
-          className="h-40 md:h-60 w-auto flex justify-center mb-1"
-        >
-          <img
-            src={edu.icon}
-            className="h-40 md:h-60 w-auto object-cover rounded-xl"
-          />
-        </CardItem>
+        {edu.icon && (
+          <CardItem
+            translateZ="50"
+            className="h-40 md:h-60 w-auto flex justify-center mb-1"
+          >
+            <img
+              src={import.meta.env.BASE_URL + edu.icon}
+              className="h-40 md:h-60 w-auto object-cover rounded-xl"
+            />
+          </CardItem>
+        )}
         <CardItem translateZ="100" className="text-lg w-full flex justify-end">
           <div>{`${edu.gpa} / ${edu.maxGpa}`}</div>
         </CardItem>

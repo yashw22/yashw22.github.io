@@ -2,14 +2,12 @@ import PropTypes from "prop-types";
 import Pill from "./Pill";
 
 export default function InternshipCard({ intern }) {
-  console.log("hi", intern.icon);
-
   return (
     <div className="m-2 mb-4 lg:mb-12 p-4 rounded-xl flex flex-col md:flex-row justify-center items-center border-2 border-light-text/20 dark:border-dark-text/20">
       <div className="flex-shrink-0 mb-4 lg:mb-0 md:mr-4">
         <a href={intern.url} rel="noreferrer" className="clickable">
           <img
-            src={intern.icon}
+            src={import.meta.env.BASE_URL + intern.icon}
             className="h-auto max-w-[100px] lg:max-w-[150px] rounded-xl"
             alt={`${intern.company} logo`}
           />

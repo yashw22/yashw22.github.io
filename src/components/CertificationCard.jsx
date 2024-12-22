@@ -5,16 +5,21 @@ export default function CertificationCard({ cert }) {
   return (
     <CardContainer>
       <CardBody className="clickable group/card p-2 border-2 rounded-xl border-light-text/60 dark:border-dark-text">
-      <CardItem translateZ="100" className="text-xl md:text-2xl mb-1">
+        <CardItem translateZ="100" className="text-xl md:text-2xl mb-1">
           {cert.title} <span className="text-sm">{cert.source}</span>
         </CardItem>
-        <CardItem translateZ="50" className="w-full">
-          <img
-            src={cert.icon}
-            className="h-auto w-full object-cover rounded-xl "
-          />
-        </CardItem>
-        <CardItem translateZ="80" className="text-sm mt-2 flex w-full justify-end">
+        {cert.icon && (
+          <CardItem translateZ="50" className="w-full">
+            <img
+              src={import.meta.env.BASE_URL + cert.icon}
+              className="h-auto w-full object-cover rounded-xl "
+            />
+          </CardItem>
+        )}
+        <CardItem
+          translateZ="80"
+          className="text-sm mt-2 flex w-full justify-end"
+        >
           {`${cert.issueMonth} ${cert.issueYear}`}
           {/* </div> */}
         </CardItem>
