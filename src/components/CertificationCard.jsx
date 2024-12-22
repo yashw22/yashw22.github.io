@@ -11,7 +11,7 @@ export default function CertificationCard({ cert }) {
         {cert.icon && (
           <CardItem translateZ="50" className="w-full">
             <img
-              src={import.meta.env.BASE_URL + cert.icon}
+              src={cert.icon}
               className="h-auto w-full object-cover rounded-xl "
             />
           </CardItem>

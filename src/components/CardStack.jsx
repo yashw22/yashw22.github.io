@@ -39,10 +39,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
           }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            src={`${import.meta.env.BASE_URL}/tools/${tool}.png`}
-            className="h-40 w-auto"
-          />
+          <img src={`/tools/${tool}.png`} className="h-40 w-auto" />
           <div>{tool.toUpperCase()}</div>
         </motion.div>
       ))}

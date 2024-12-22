@@ -12,7 +12,7 @@ export default function ProjectCard({ project }) {
         {project.icon && (
           <CardItem translateZ="50" className="w-full mb-1">
             <img
-              src={import.meta.env.BASE_URL + project.icon}
+              src={project.icon}
               className="h-auto w-full object-cover rounded-xl"
             />
           </CardItem>

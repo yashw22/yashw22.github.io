@@ -38,30 +38,32 @@ export default function ProjectPage() {
   };
 
   return (
-    <div className="m-4 mt-12 justify-self-center md:w-[80%] 2xl:w-[70%]">
-      <AnimatePresence>
-        {isModal && (
-          <ProjectDetailModal
-            project={profile.projects[projectIdx]}
-            closeModal={() => setIsModal(false)}
-          />
-        )}
-      </AnimatePresence>
+    <div className="flex justify-center">
+      <div className="m-4 mt-12 md:w-[80%] 2xl:w-[70%]">
+        <AnimatePresence>
+          {isModal && (
+            <ProjectDetailModal
+              project={profile.projects[projectIdx]}
+              closeModal={() => setIsModal(false)}
+            />
+          )}
+        </AnimatePresence>
 
-      <div className="text-5xl my-2 text-center">My Projects</div>
+        <div className="text-5xl my-2 text-center">My Projects</div>
 
-      <div className="flex flex-col justify-center items-center">
-        {profile.projects.map((project, idx) => (
-          <div
-            key={idx}
-            className={`m-2 w-80 md:w-96 px-2 ${
-              idx % 2 === 0 ? "lg:translate-x-[70%]" : "lg:-translate-x-[70%]"
-            }`}
-            onClick={() => handleCardClick(idx)}
-          >
-            <ProjectCard project={project} />
-          </div>
-        ))}
+        <div className="flex flex-col justify-center items-center">
+          {profile.projects.map((project, idx) => (
+            <div
+              key={idx}
+              className={`m-2 w-80 md:w-96 px-2 ${
+                idx % 2 === 0 ? "lg:translate-x-[70%]" : "lg:-translate-x-[70%]"
+              }`}
+              onClick={() => handleCardClick(idx)}
+            >
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

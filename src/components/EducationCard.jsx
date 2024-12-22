@@ -21,7 +21,7 @@ export default function EducationCard({ edu }) {
             className="h-40 md:h-60 w-auto flex justify-center mb-1"
           >
             <img
-              src={import.meta.env.BASE_URL + edu.icon}
+              src={edu.icon}
               className="h-40 md:h-60 w-auto object-cover rounded-xl"
             />
           </CardItem>

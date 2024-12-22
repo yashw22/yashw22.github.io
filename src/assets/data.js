@@ -147,7 +147,7 @@ export const profile = {
       "Developed a Flask-based search application with integrated MongoDB and MySQL support, enabling users to perform keyword and filter-based searches on tweets.",
       "Implemented a naive and efficient caching mechanism locally to optimize performance, significantly reducing response times for subsequent queries.",
     ],
-    icon: "/projects/tweetapp.png",
+    icon: null,
     url: "https://github.com/yashw22/TwitterDB",
     stack: ["Python", "MongoDB", "MySQL", "Flask", "REST APIs", "SQL"],
   }, {

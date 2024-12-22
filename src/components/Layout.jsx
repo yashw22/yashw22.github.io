@@ -30,7 +30,6 @@ export default function Layout() {
         <ResumeBtn />
         <Outlet />
         <Footer />
-
         <ScrollToTop />
         <Cursor />
       </div>

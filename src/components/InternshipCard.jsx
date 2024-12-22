@@ -7,7 +7,7 @@ export default function InternshipCard({ intern }) {
       <div className="flex-shrink-0 mb-4 lg:mb-0 md:mr-4">
         <a href={intern.url} rel="noreferrer" className="clickable">
           <img
-            src={import.meta.env.BASE_URL + intern.icon}
+            src={intern.icon}
             className="h-auto max-w-[100px] lg:max-w-[150px] rounded-xl"
             alt={`${intern.company} logo`}
           />
