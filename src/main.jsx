@@ -32,7 +32,7 @@ import ProjectPage from "./Pages/ProjectPage";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouter>
+    <HashRouter path="/portfolio-website">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HeroPage />} />
