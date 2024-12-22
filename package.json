@@ -1,6 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "portfolio-website",
   "homepage": "https://yashw22.github.io/portfolio-website/",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
