@@ -26,7 +26,7 @@
 
 .header {
   @apply sticky top-0 md:top-2 z-[110] px-5 py-2 mb-4
-  rounded-lg shadow-md backdrop-blur-md
+  rounded-lg shadow-md backdrop-blur-xl bg-light-bg/60 dark:bg-dark-bg/60
   sm:px-10 lg:px-4 lg:mx-36 md:rounded-full
   /* bg-light-bg dark:bg-dark-bg */
   theme-anim;
@@ -38,4 +38,9 @@
 
 .clickable {
   @apply cursor-none;
+}
+
+img {
+  @apply drop-shadow-light dark:drop-shadow-dark
+  transition-all duration-700 ease-in-out;
 }

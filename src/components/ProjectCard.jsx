@@ -5,7 +5,7 @@ import Pill from "../components/Pill";
 export default function ProjectCard({ project }) {
   return (
     <CardContainer>
-      <CardBody className="clickable group/card">
+      <CardBody className="clickable group/card p-2 border-2 rounded-xl border-light-text/60 dark:border-dark-text">
         <CardItem translateZ="100" className="text-xl md:text-2xl mb-2">
           {project.title}
         </CardItem>

@@ -4,8 +4,8 @@ import { CardBody, CardContainer, CardItem } from "./Card3D";
 export default function EducationCard({ edu }) {
   return (
     <CardContainer>
-      <CardBody className="clickable group/card">
-        <CardItem translateZ="100" className="text-xl md:text-2xl mb-1">
+      <CardBody className="clickable group/card p-2 border-2 rounded-xl border-light-text/60 dark:border-dark-text">
+      <CardItem translateZ="100" className="text-xl md:text-2xl mb-1">
           {edu.name} <span className="text-sm">{edu.location}</span>
         </CardItem>
         <CardItem translateZ="80" className="text-sm mb-2">
@@ -21,7 +21,7 @@ export default function EducationCard({ edu }) {
         >
           <img
             src={edu.icon}
-            className="h-40 md:h-60 w-auto object-cover rounded-xl overflow-hidden"
+            className="h-40 md:h-60 w-auto object-cover rounded-xl"
           />
         </CardItem>
         <CardItem translateZ="100" className="text-lg w-full flex justify-end">

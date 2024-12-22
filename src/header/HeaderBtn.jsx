@@ -2,13 +2,15 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Pill from "../components/Pill";
 
-export default function HeaderBtn({ section }) {
+export default function HeaderBtn({ section, enabled = false }) {
   return (
     <Link to={section.link} className="clickable">
-      <Pill className="headerBtn">{section.name}</Pill>
-      {/* <div className="clickable headerBtn rounded-3xl px-4 py-1.5 bg-light-btn text-light-btnTxt dark:bg-dark-btn dark:text-dark-btnTxt theme-anim">
+      <Pill
+        className="headerBtn hover:bg-light-primary hover:dark:bg-dark-primary"
+        enabled={enabled}
+      >
         {section.name}
-      </div> */}
+      </Pill>
     </Link>
   );
 }
@@ -18,4 +20,5 @@ HeaderBtn.propTypes = {
     name: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
   }).isRequired,
+  enabled: PropTypes.bool,
 };

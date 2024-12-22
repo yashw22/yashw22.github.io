@@ -5,7 +5,7 @@ const Cursor = memo(function Cursor() {
   const dotRef = useRef(null);
   const circleRef = useRef(null);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     setIsTouchDevice(
@@ -53,7 +53,7 @@ const Cursor = memo(function Cursor() {
         });
       };
     }
-  }, [isTouchDevice, location]);
+  }, [isTouchDevice, pathname]);
 
   if (isTouchDevice) {
     return null;

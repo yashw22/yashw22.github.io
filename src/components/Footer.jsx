@@ -10,7 +10,7 @@ export default function Footer() {
   const getLinks = (links) => {
     return links.map((link) => (
       <a className="clickable group relative" key={link.name} href={link.url} rel="noreferrer">
-        <span className="absolute text-md rounded-md px-2 -top-full left-1/2 -translate-x-1/2 bg-light-btn dark:bg-dark-btn text-light-btnTxt dark:text-dark-btnTxt scale-0 opacity-0 transform group-hover:opacity-100 group-hover:scale-100 hover-anim">
+        <span className="absolute text-md rounded-md px-2 -top-full left-1/2 -translate-x-1/2 border-2 border-light-text/20 dark:border-dark-text/20 scale-0 opacity-0 transform group-hover:opacity-100 group-hover:scale-100 hover-anim">
           {link.name}
         </span>
         {link.name === "Mail" ? (
@@ -46,7 +46,7 @@ export default function Footer() {
             {index < profile.sections.length - 1 && (
               <>
                 <div className="hidden md:inline">/</div>
-                <div className=" border-b-2 w-20 border-light-btn dark:border-dark-btn theme-anim md:hidden"></div>
+                <div className="border-b-2 w-20 border-light-text/60 dark:border-dark-text/60 theme-anim md:hidden"></div>
               </>
             )}
           </Fragment>

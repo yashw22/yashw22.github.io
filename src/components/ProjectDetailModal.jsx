@@ -17,7 +17,7 @@ export default function ProjectDetailModal({ project, closeModal }) {
 
   return (
     <motion.div
-      className="fixed inset-0 w-screen h-screen z-[120] backdrop-blur-3xl flex justify-center items-center"
+      className="fixed inset-0 w-screen h-screen z-[120] backdrop-blur-3xl bg-light-bg/60 dark:bg-dark-bg/60 flex justify-center items-center"
       onClick={(e) => {
         if (!e.target.classList.contains("hyperlink")) {
           closeModal();

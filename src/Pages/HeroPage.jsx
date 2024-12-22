@@ -9,9 +9,10 @@ import TextMorph from "../components/TextMorph";
 export default function HeroPage() {
   const profile = useContext(ProfileContext);
   return (
-    <div className="m-4 justify-self-center flex flex-col md:w-[80%] 2xl:w-[70%]">
-      <div className="md:h-[80vh] flex flex-col md:flex-row">
-        <div className="md:w-[50%] h-[90vh] md:h-auto flex flex-col justify-center items-start">
+    <div className="m-4 justify-self-center flex flex-col justify-center md:w-[80%] 2xl:w-[70%]">
+      <div className="md:h-[80vh] flex flex-col md:flex-row justify-center">
+        {/* <div className="md:w-[50%] h-[90vh] md:h-auto flex flex-col justify-center items-start"> */}
+        <div className="md:w-[100%] h-[90vh] md:h-auto flex flex-col justify-center items-start">
           <div className="text-5xl mb-5">
             Hi, my name is <span>{profile.name}</span>
           </div>
@@ -48,7 +49,7 @@ export default function HeroPage() {
             <div className="text-sm">{profile.mailId}</div>
           </div>
           <a href={`mailto:${profile.mailId}`}>
-            <Pill className="text-xl space-x-2 clickable">
+            <Pill className="text-xl space-x-2 clickable hover:bg-light-primary hover:dark:bg-dark-primary">
               <span>Send a mail</span>
               <RiMailSendLine />
             </Pill>

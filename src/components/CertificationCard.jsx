@@ -4,8 +4,8 @@ import { CardBody, CardContainer, CardItem } from "./Card3D";
 export default function CertificationCard({ cert }) {
   return (
     <CardContainer>
-      <CardBody className="clickable group/card">
-        <CardItem translateZ="100" className="text-xl md:text-2xl mb-1">
+      <CardBody className="clickable group/card p-2 border-2 rounded-xl border-light-text/60 dark:border-dark-text">
+      <CardItem translateZ="100" className="text-xl md:text-2xl mb-1">
           {cert.title} <span className="text-sm">{cert.source}</span>
         </CardItem>
         <CardItem translateZ="50" className="w-full">

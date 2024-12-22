@@ -5,13 +5,19 @@ import NameLogo from "./NameLogo";
 import ThemeBtn from "./ThemeBtn";
 import { useContext, useState } from "react";
 import { ProfileContext } from "../helpers/Contexts";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
   const profile = useContext(ProfileContext);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
   const getHeaderBtns = profile.sections.map((section) => (
-    <HeaderBtn key={section.name} section={section} />
+    <HeaderBtn
+      key={section.name}
+      section={section}
+      enabled={pathname === section.link}
+    />
   ));
 
   return (
@@ -21,11 +27,14 @@ export default function Header() {
 
         <div className="flex items-center space-x-4 md:hidden">
           <ThemeBtn />
-          <button onClick={() => setMenuOpen(!menuOpen)} className="p-2">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="p-2 text-light-text dark:text-dark-text theme-anim"
+          >
             {menuOpen ? (
-              <RiCloseLargeLine className="w-6 h-6 text-light-text dark:text-dark-text theme-anim" />
+              <RiCloseLargeLine className="w-6 h-6" />
             ) : (
-              <FaBars className="w-6 h-6 text-light-text dark:text-dark-text theme-anim" />
+              <FaBars className="w-6 h-6" />
             )}
           </button>
         </div>
