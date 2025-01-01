@@ -4,17 +4,17 @@ import { useLocation } from "react-router-dom";
 const Cursor = memo(function Cursor() {
   const dotRef = useRef(null);
   const circleRef = useRef(null);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [hasCursor, setHasCursor] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
-    setIsTouchDevice(
-      "ontouchstart" in window ||
-        navigator.maxTouchPoints > 0 ||
-        navigator.msMaxTouchPoints > 0
-    );
-
-    if (!isTouchDevice) {
+    setHasCursor(window.matchMedia("(pointer: fine)").matches)
+    // setIsTouchDevice(
+    //   "ontouchstart" in window ||
+    //     navigator.maxTouchPoints > 0 ||
+    //     navigator.msMaxTouchPoints > 0
+    // );
+    if (hasCursor) {
       const moveCursor = (event) => {
         const { clientX: mouseX, clientY: mouseY } = event;
         if (dotRef.current && circleRef.current) {
@@ -53,9 +53,9 @@ const Cursor = memo(function Cursor() {
         });
       };
     }
-  }, [isTouchDevice, pathname]);
+  }, [hasCursor, pathname]);
 
-  if (isTouchDevice) {
+  if (!hasCursor) {
     return null;
   }
 

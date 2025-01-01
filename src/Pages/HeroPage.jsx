@@ -1,13 +1,16 @@
-import { useContext } from "react";
-// import ThemeBar from "../components/ThemeBar";
+import { useContext, useState } from "react";
 import { ProfileContext } from "../helpers/Contexts";
 import { CardStack } from "../components/CardStack";
 import Pill from "../components/Pill";
 import { RiMailSendLine } from "react-icons/ri";
 import TextMorph from "../components/TextMorph";
+import Terminal from "./Terminal";
+import { AnimatePresence } from "framer-motion";
 
 export default function HeroPage() {
   const profile = useContext(ProfileContext);
+  const [isTerminalActive, setIsTerminalActive] = useState(false);
+
   return (
     <div className="flex justify-center">
       <div className="m-4 flex flex-col md:w-[80%] 2xl:w-[70%]">
@@ -21,6 +24,16 @@ export default function HeroPage() {
               start={profile.headlineStart}
               phrases={profile.headlineList}
             />
+            <div className="mt-10" onClick={() => setIsTerminalActive(true)}>
+              <Pill className="text-xl clickable hover:bg-light-primary hover:dark:bg-dark-primary">
+                Enter Terminal {"</>"}
+              </Pill>
+              <AnimatePresence>
+                {isTerminalActive && (
+                  <Terminal exitTerminal={() => setIsTerminalActive(false)} />
+                )}
+              </AnimatePresence>
+            </div>
           </div>
           {/* <div className="md:w-[50%] h-[90vh] md:h-auto flex justify-center items-center">
           3d content
