@@ -290,13 +290,13 @@ export const profile = {
       name: "Linkedin",
       icon: null,
       url: "https://www.linkedin.com/in/yashw22/",
-      handle: "yashw22",
+      handle: "linkedin.com/in/yashw22",
     },
     {
       name: "Github",
       icon: null,
       url: "https://github.com/yashw22",
-      handle: "yashw22",
+      handle: "github.com/yashw22",
     },
     // {
     //   name: "Instagram",
