@@ -31,36 +31,38 @@ export default function EducationDetailModal({ edu, closeModal }) {
       }}
       {...animateProps}
     >
-      <div className="m-4 mt-12 justify-self-center w-[80%]  2xl:max-w-[70%] h-full">
-        <div className="text-3xl my-2 text-center">{edu.name}</div>
-        <ul className="text-md lg:text-lg list-disc pl-5">
-          {edu.description.map((desc, idx) => (
-            <div key={idx}>
-              <li className="text-justify">{desc}</li>
+      <div className="p-4 pt-12 flex w-[80%] 2xl:max-w-[70%] h-full items-center bg-green-800">
+        <div>
+          <div className="text-3xl my-2 text-center">{edu.name}</div>
+          <ul className="text-md lg:text-lg list-disc pl-5">
+            {edu.description.map((desc, idx) => (
+              <div key={idx}>
+                <li className="text-justify">{desc}</li>
+              </div>
+            ))}
+          </ul>
+          <ul className="text-md lg:text-lg list-disc my-5 pl-5 grid grid-cols-1 lg:grid-cols-2 lg:gap-2">
+            {edu.subjects.map((desc, idx) => (
+              <div key={idx}>
+                <li className="text-justify">{desc}</li>
+              </div>
+            ))}
+          </ul>
+          {edu.url && (
+            <div className="flex justify-center items-center space-x-2 flex-wrap">
+              <a href={edu.url} rel="noreferrer" className="clickable my-2">
+                <Pill className="hyperlink">Institution&apos;s Linkedin</Pill>
+              </a>
+              <a
+                href={edu.transcript}
+                rel="noreferrer"
+                className="clickable my-2"
+              >
+                <Pill className="hyperlink">Transcript</Pill>
+              </a>
             </div>
-          ))}
-        </ul>
-        <ul className="text-md lg:text-lg list-disc my-5 pl-5 grid grid-cols-1 lg:grid-cols-2 lg:gap-2">
-          {edu.subjects.map((desc, idx) => (
-            <div key={idx}>
-              <li className="text-justify">{desc}</li>
-            </div>
-          ))}
-        </ul>
-        {edu.url && (
-          <div className="flex justify-center items-center space-x-2 flex-wrap">
-            <a href={edu.url} rel="noreferrer" className="clickable my-2">
-              <Pill className="hyperlink">Institution&apos;s Linkedin</Pill>
-            </a>
-            <a
-              href={edu.transcript}
-              rel="noreferrer"
-              className="clickable my-2"
-            >
-              <Pill className="hyperlink">Transcript</Pill>
-            </a>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </motion.div>
   );
