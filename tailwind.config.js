@@ -18,41 +18,19 @@ export default {
         error: '#EF4444',
 
         light: {
-          text: '#1e5786',
+          text: '#384448',
           bg: '#f1ece4',
-          primary: '#1e578640',
+          primary: '#38444840',
           // primary: '#d5a84e',
           secondary: '#f8eea6',
 
-
-          // btn: '#1F2937',
-          // btnTxt: '#E5E7EB',
-          // bg: '#E5E7EB',
-          // primary: '#1F2937',
-          // text: '#111827',
-          // accent: '#3B82F6',
-          // secondaryAccent: '#10B981',
-          // card: '#1F2937',
-          // cardText: '#E5E7EB',
-          // cardBorder: '#22C55E',
         },
         dark: {
           text: '#f1ece4',
-          bg: '#1e5786',
+          bg: '#384448',
           primary: '#f1ece440',
           // primary: '#d5a84e',
           secondary: '#f8eea6',
-
-          // btn: '#E5E7EB',
-          // btnTxt: '#1F2937',
-          // bg: '#1F2937',
-          // primary: '#E5E7EB',
-          // text: '#D1D5DB',
-          // accent: '#3B82F6',
-          // secondaryAccent: '#10B981',
-          // card: '#E5E7EB',
-          // cardText: '#1F2937',
-          // cardBorder: '#22C55E',
         },
       }
 
