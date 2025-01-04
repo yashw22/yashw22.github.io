@@ -226,7 +226,7 @@ export const profile = {
         "Built a full-stack application with React and Express.js, using Docker Compose for container orchestration, providing a scalable, modular, and efficient architecture for processing and visualizing real-time sports data.",
       ],
       icon: "/projects/sports.png",
-      url: "https://github.com/yashw22/real-time-sports-data-dtream",
+      url: "https://github.com/yashw22/real-time-sports-data-stream",
       stack: [
         "Kafka",
         "Docker",
