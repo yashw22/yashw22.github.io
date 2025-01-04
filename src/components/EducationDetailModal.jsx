@@ -31,7 +31,7 @@ export default function EducationDetailModal({ edu, closeModal }) {
       }}
       {...animateProps}
     >
-      <div className="p-4 pt-12 flex w-[80%] 2xl:max-w-[70%] h-full items-center bg-green-800">
+      <div className="p-4 pt-12 flex w-[80%] 2xl:max-w-[70%] h-full items-center justify-center">
         <div>
           <div className="text-3xl my-2 text-center">{edu.name}</div>
           <ul className="text-md lg:text-lg list-disc pl-5">
