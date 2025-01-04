@@ -23,7 +23,7 @@ export default function EducationDetailModal({ edu, closeModal }) {
 
   return (
     <motion.div
-      className="fixed inset-0 w-screen h-screen z-[120] backdrop-blur-3xl bg-light-bg/60 dark:bg-dark-bg/60 flex justify-center items-center"
+      className="fixed inset-0 w-screen h-screen z-[120] backdrop-blur-3xl bg-light-bg/60 dark:bg-dark-bg/60 flex justify-center items-center overflow-y-auto"
       onClick={(e) => {
         if (!e.target.classList.contains("hyperlink")) {
           closeModal();
@@ -31,10 +31,17 @@ export default function EducationDetailModal({ edu, closeModal }) {
       }}
       {...animateProps}
     >
-      <div className="m-4 mt-12 justify-self-center w-[80%]  2xl:max-w-[70%]">
+      <div className="m-4 mt-12 justify-self-center w-[80%]  2xl:max-w-[70%] h-full">
         <div className="text-3xl my-2 text-center">{edu.name}</div>
         <ul className="text-md lg:text-lg list-disc pl-5">
           {edu.description.map((desc, idx) => (
+            <div key={idx}>
+              <li className="text-justify">{desc}</li>
+            </div>
+          ))}
+        </ul>
+        <ul className="text-md lg:text-lg list-disc my-5 pl-5 grid grid-cols-1 lg:grid-cols-2 lg:gap-2">
+          {edu.subjects.map((desc, idx) => (
             <div key={idx}>
               <li className="text-justify">{desc}</li>
             </div>
@@ -75,6 +82,7 @@ EducationDetailModal.propTypes = {
     icon: PropTypes.string,
     url: PropTypes.string,
     transcript: PropTypes.string,
+    subjects: PropTypes.arrayOf(PropTypes.string),
     description: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
   closeModal: PropTypes.func.isRequired,
