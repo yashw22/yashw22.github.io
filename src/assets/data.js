@@ -261,7 +261,6 @@ export const profile = {
       endYear: "2023",
       description: [
         "Utilized model-free reinforcement learning to train a neural network, that enables Unitree Go1 robot to navigate autonomously and avoid obstacles in complex environments within the Isaac Gym Simulator.",
-        "Implemented a lightweight signaling server on Render to facilitate initial peer discovery and connection, enabling a decentralized and scalable architecture.",
       ],
       icon: "/projects/rl.gif",
       url: "https://github.com/yashw22/go1_gym_simulation",
