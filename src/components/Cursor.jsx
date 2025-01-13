@@ -1,11 +1,9 @@
 import { memo, useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
 
-const Cursor = memo(function Cursor() {
+const Cursor = memo(function Cursor({currentPage}) {
   const dotRef = useRef(null);
   const circleRef = useRef(null);
   const [hasCursor, setHasCursor] = useState(false);
-  const { pathname } = useLocation();
 
   useEffect(() => {
     setHasCursor(window.matchMedia("(pointer: fine)").matches)
@@ -53,7 +51,7 @@ const Cursor = memo(function Cursor() {
         });
       };
     }
-  }, [hasCursor, pathname]);
+  }, [hasCursor, currentPage]);
 
   if (!hasCursor) {
     return null;

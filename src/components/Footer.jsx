@@ -1,11 +1,10 @@
 import { Fragment, useContext } from "react";
-import { ProfileContext } from "../helpers/Contexts";
+import { GlobalContext } from "../helpers/Contexts";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { IoIosMail } from "react-icons/io";
 
 export default function Footer() {
-  const profile = useContext(ProfileContext);
+  const {profile, setCurrentPage} = useContext(GlobalContext);
 
   const getLinks = (links) => {
     return links.map((link) => (
@@ -39,10 +38,10 @@ export default function Footer() {
 
       <div className="my-2 text-lg flex items-center justify-center flex-col space-x-0 md:flex-row md:space-x-3">
         {profile.sections.map((section, index) => (
-          <Fragment key={section.name}>
-            <Link to={section.link} className="clickable">
-              {section.name}
-            </Link>
+          <Fragment key={section}>
+            <div to={section} className="clickable" onClick={()=>setCurrentPage(section)}>
+              {section}
+            </div>
             {index < profile.sections.length - 1 && (
               <>
                 <div className="hidden md:inline">/</div>

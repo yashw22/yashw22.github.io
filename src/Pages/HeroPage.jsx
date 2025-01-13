@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { ProfileContext } from "../helpers/Contexts";
+import { GlobalContext } from "../helpers/Contexts";
 import { CardStack } from "../components/CardStack";
 import Pill from "../components/Pill";
 import { RiMailSendLine } from "react-icons/ri";
@@ -8,7 +8,7 @@ import Terminal from "./Terminal";
 import { AnimatePresence } from "framer-motion";
 
 export default function HeroPage() {
-  const profile = useContext(ProfileContext);
+  const {profile} = useContext(GlobalContext);
   const [isTerminalActive, setIsTerminalActive] = useState(false);
 
   return (

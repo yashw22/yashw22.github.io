@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
-import { ProfileContext } from "../helpers/Contexts";
+import { GlobalContext } from "../helpers/Contexts";
 import EducationCard from "../components/EducationCard";
 import CertificationCard from "../components/CertificationCard";
 import { AnimatePresence } from "framer-motion";
 import EducationDetailModal from "../components/EducationDetailModal";
 
 export default function EducationPage() {
-  const profile = useContext(ProfileContext);
+  const {profile} = useContext(GlobalContext);
   const [isModal, setIsModal] = useState(false);
   const [eduIdx, setEduIdx] = useState();
 

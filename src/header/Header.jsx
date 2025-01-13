@@ -4,26 +4,25 @@ import HeaderBtn from "./HeaderBtn";
 import NameLogo from "./NameLogo";
 import ThemeBtn from "./ThemeBtn";
 import { useContext, useState } from "react";
-import { ProfileContext } from "../helpers/Contexts";
-import { useLocation } from "react-router-dom";
+import { GlobalContext } from "../helpers/Contexts";
 
 export default function Header() {
-  const profile = useContext(ProfileContext);
+  const { profile, currentPage, setCurrentPage } = useContext(GlobalContext);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { pathname } = useLocation();
 
   const getHeaderBtns = profile.sections.map((section) => (
     <HeaderBtn
-      key={section.name}
+      key={section}
       section={section}
-      enabled={pathname === section.link}
+      enabled={currentPage === section}
+      setCurrentPage={setCurrentPage}
     />
   ));
 
   return (
     <>
       <div className="header flex items-center justify-between">
-        <NameLogo name={profile.name} />
+        <NameLogo name={profile.name} setCurrentPage={setCurrentPage} />
 
         <div className="flex items-center space-x-4 md:hidden">
           <ThemeBtn />

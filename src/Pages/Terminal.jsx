@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import { useContext, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ProfileContext } from "../helpers/Contexts";
+import { GlobalContext } from "../helpers/Contexts";
 
 const getDate = (item) => {
   return `${item.startMonth}, ${item.startYear} - ${item.endMonth}, ${item.endYear} `;
 };
 
 function Terminal({ exitTerminal }) {
-  const profile = useContext(ProfileContext);
+  const {profile} = useContext(GlobalContext);
 
   const start = "-> yash_wardhan $";
   const info = [

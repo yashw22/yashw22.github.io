@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { ProfileContext } from "../helpers/Contexts";
+import { GlobalContext } from "../helpers/Contexts";
 import ProjectCard from "../components/ProjectCard";
 import ProjectDetailModal from "../components/ProjectDetailModal";
 import { AnimatePresence } from "framer-motion";
@@ -8,7 +8,7 @@ import { AnimatePresence } from "framer-motion";
 // import { HoverEffect } from "../components/ItemsHoverEffect";
 
 export default function ProjectPage() {
-  const profile = useContext(ProfileContext);
+  const {profile} = useContext(GlobalContext);
   const [isModal, setIsModal] = useState(false);
   const [projectIdx, setProjectIdx] = useState();
   // const [filterIsOpen, setFilterIsOpen] = useState(true);

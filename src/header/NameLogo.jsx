@@ -1,12 +1,8 @@
-import PropTypes from "prop-types";
-import { Link, useNavigate } from "react-router-dom";
-
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function NameLogo({ name }) {
+export default function NameLogo({ name, setCurrentPage }) {
   const [isVisible, setIsVisible] = useState(true);
-  const navigate = useNavigate();
   const fullName = name.split(" ");
 
   useEffect(() => {
@@ -25,12 +21,12 @@ export default function NameLogo({ name }) {
   };
 
   return (
-    <Link
+    <div
       className="clickable cursor-none"
       onClick={(event) => {
         event.preventDefault();
         setTimeout(() => {
-          navigate("/");
+          setCurrentPage("Home");
         }, 500);
       }}
     >
@@ -57,10 +53,6 @@ export default function NameLogo({ name }) {
           )}
         </AnimatePresence>
       </div>
-    </Link>
+    </div>
   );
 }
-
-NameLogo.propTypes = {
-  name: PropTypes.string.isRequired,
-};

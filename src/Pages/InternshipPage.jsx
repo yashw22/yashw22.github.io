@@ -1,11 +1,11 @@
 // import { CardStack } from "../components/CardStack";
 
 import { useContext } from "react";
-import { ProfileContext } from "../helpers/Contexts";
+import { GlobalContext } from "../helpers/Contexts";
 import InternshipCard from "../components/InternshipCard";
 
 export default function InternshipPage() {
-  const profile = useContext(ProfileContext);
+  const {profile} = useContext(GlobalContext);
 
   return (
     <div className="flex justify-center">

@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { IoDocumentTextOutline } from "react-icons/io5";
-import { ProfileContext } from "../helpers/Contexts";
+import { GlobalContext } from "../helpers/Contexts";
 
 export default function ResumeBtn() {
-  const profile = useContext(ProfileContext);
+  const {profile} = useContext(GlobalContext);
   return (
     <a
       href={profile.resumeUrl}
