@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "../helpers/utils";
 import { createContext, useState, useContext, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
