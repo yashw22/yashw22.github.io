@@ -1,15 +1,14 @@
-"use client";
-
-import { useState } from "react";
-import { CardStack } from "../CardStack";
-import Pill from "../Pill";
+import { useContext, useState } from "react";
+import { GlobalContext } from "../helpers/Contexts";
+import { CardStack } from "../components/CardStack";
+import Pill from "../components/Pill";
 import { RiMailSendLine } from "react-icons/ri";
-import TextMorph from "../TextMorph";
+import TextMorph from "../components/TextMorph";
 import Terminal from "./Terminal";
 import { AnimatePresence } from "framer-motion";
-import { profile } from "@/helpers/data";
 
-const HeroPage = () => {
+export default function HeroPage() {
+  const {profile} = useContext(GlobalContext);
   const [isTerminalActive, setIsTerminalActive] = useState(false);
 
   return (
@@ -78,6 +77,4 @@ const HeroPage = () => {
       </div>
     </div>
   );
-};
-
-export default HeroPage;
+}

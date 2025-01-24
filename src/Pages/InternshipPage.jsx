@@ -1,9 +1,12 @@
-"use client";
+// import { CardStack } from "../components/CardStack";
 
-import InternshipCard from "@/components/InternshipCard";
-import { profile } from "@/helpers/data";
+import { useContext } from "react";
+import { GlobalContext } from "../helpers/Contexts";
+import InternshipCard from "../components/InternshipCard";
 
-const InternshipPage = () => {
+export default function InternshipPage() {
+  const {profile} = useContext(GlobalContext);
+
   return (
     <div className="flex justify-center">
       <div className="m-4 mt-12 md:w-[80%] 2xl:w-[60%]">
@@ -17,6 +20,4 @@ const InternshipPage = () => {
       </div>
     </div>
   );
-};
-
-export default InternshipPage;
+}

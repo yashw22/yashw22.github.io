@@ -1,14 +1,12 @@
-"use client";
-
 import { memo, useEffect, useRef, useState } from "react";
 
-const Cursor = memo(function Cursor({ currentPage }) {
+const Cursor = memo(function Cursor({currentPage}) {
   const dotRef = useRef(null);
   const circleRef = useRef(null);
   const [hasCursor, setHasCursor] = useState(false);
 
   useEffect(() => {
-    setHasCursor(window.matchMedia("(pointer: fine)").matches);
+    setHasCursor(window.matchMedia("(pointer: fine)").matches)
     // setIsTouchDevice(
     //   "ontouchstart" in window ||
     //     navigator.maxTouchPoints > 0 ||

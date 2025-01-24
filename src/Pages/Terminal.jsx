@@ -1,15 +1,15 @@
-"use client";
-
 import PropTypes from "prop-types";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { profile } from "@/helpers/data";
+import { GlobalContext } from "../helpers/Contexts";
 
 const getDate = (item) => {
   return `${item.startMonth}, ${item.startYear} - ${item.endMonth}, ${item.endYear} `;
 };
 
 function Terminal({ exitTerminal }) {
+  const {profile} = useContext(GlobalContext);
+
   const start = "-> yash_wardhan $";
   const info = [
     "Welcome to my profile's terminal",

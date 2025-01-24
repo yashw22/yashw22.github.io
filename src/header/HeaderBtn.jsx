@@ -1,4 +1,4 @@
-import Pill from "@/components/Pill";
+import Pill from "../components/Pill";
 
 export default function HeaderBtn({ section, setCurrentPage, enabled = false }) {
   return (

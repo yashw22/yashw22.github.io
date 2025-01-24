@@ -1,14 +1,13 @@
-"use client";
-
 import { FaBars } from "react-icons/fa";
 import { RiCloseLargeLine } from "react-icons/ri";
 import HeaderBtn from "./HeaderBtn";
 import NameLogo from "./NameLogo";
 import ThemeBtn from "./ThemeBtn";
-import { useState } from "react";
-import { profile } from "@/helpers/data";
+import { useContext, useState } from "react";
+import { GlobalContext } from "../helpers/Contexts";
 
-export default function Header({ currentPage, setCurrentPage }) {
+export default function Header() {
+  const { profile, currentPage, setCurrentPage } = useContext(GlobalContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const getHeaderBtns = profile.sections.map((section) => (
