@@ -60,7 +60,7 @@ export const profile = {
   resumeUrl:
     "https://drive.google.com/file/d/1Vu5hhBX__ankyiL24D57fhVOQ73c0V-i/view?usp=drive_link",
   mailId: "yashwardhan2210@gmail.com",
-  toolsFocus: ["react", "aws", "docker", "python", "git", "c++"],
+  toolsFocus: ["react", "docker", "python", "git", "c++"],
 
   education: [
     {
