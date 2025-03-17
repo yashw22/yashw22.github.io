@@ -1,7 +1,7 @@
 import Header from "../header/Header";
 import Cursor from "../components/Cursor";
 import Footer from "../components/Footer";
-import ResumeBtn from "../components/ResumeBtn";
+// import ResumeBtn from "../components/ResumeBtn";
 
 import NotFoundPage from "./NotFoundPage";
 import HeroPage from "./HeroPage";
@@ -73,7 +73,7 @@ export default function Layout() {
         className="fixed w-full h-full overflow-x-hidden bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text theme-anim cursor-none font-mono"
       >
         <Header />
-        <ResumeBtn />
+        {/* <ResumeBtn /> */}
         <AnimatePresence mode="wait">
           <motion.div key={currentPage} {...pageVariants}>
             {renderPage()}
